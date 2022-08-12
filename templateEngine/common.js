@@ -1,3 +1,5 @@
+import {Templator} from "./templator.js";
+
 const testTempl = `
 <div>
         {{ field1 }}
@@ -18,5 +20,5 @@ const context = {
 };
 
 const renderedTemplate = tmpl.compile(context); // Строка с html-вёрсткой
-
+// console.log(renderedTemplate);
 document.body.innerHTML = renderedTemplate; // Показался нужный результат

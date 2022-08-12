@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+//убираем дефолтные стили
+*{
+  padding: 0;
+  margin:0;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+//главный контейнер - страница
+.pageContainer{
+    width: 100%;
+    height: 100vh;
+    background: #ffffff;
+    display:flex;
+    flex-flow:column nowrap;
+    align-items: center;
+    justify-content: center;
+
+    //контейнер с содержимым
+    .contentContainer{
+        width:400px;
+        height:400px;
+        //background: #EBEDF2;
+        border-radius: 30px;
+
+      display:flex;
+      flex-flow:column nowrap;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    //заголовок с ошибкой
+    h1{
+        font-size:96px;
+        margin: 0 0 30px 0;
+    }
+
+    //описание проблемы
+    p{
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0 0 30px 0;
+    }
+
+  a{
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: underline;
+    color: #5852F2;
+    cursor:pointer;
+  }
+
+}
