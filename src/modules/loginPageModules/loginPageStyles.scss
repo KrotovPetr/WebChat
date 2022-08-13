@@ -69,7 +69,7 @@
               font-size:18px;
               font-weight: 500;
               color: #162026;
-              margin: 0 0 0 20px;
+              margin: 0 0 0 30px;
             }
 
             //неактивные поля ввода данных
@@ -117,6 +117,17 @@
         transform: translate(-2px, 0);
       }
 
+      .formButton a {
+        text-decoration: none;
+        color:#ffffff;
+        transition:0.5s;
+      }
+
+      .formButton:hover a{
+        color: #162026;
+        transition:0.5s;
+      }
+
     }
 
 
@@ -124,8 +135,14 @@
   .linkText{
     font-size: 18px;
     font-weight: 500;
-    color: #5852F2;
+    color: #162026;
     margin: 5px 0 10px 0;
     cursor: pointer;
+    text-decoration: none;
+  }
+
+  .linkText:hover{
+    text-decoration: underline;
+
   }
 }

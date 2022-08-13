@@ -29,6 +29,14 @@
     box-shadow:  20px 20px 60px #bebebe,
     -20px -20px 60px #ffffff;
     border-radius: 30px;
+
+    //заголовок
+    .header{
+      font-weight: bold;
+      font-size: 24px;
+      color: #162026;
+      margin: 0 0 15px 0;
+    }
   }
 
   //форма заполнения данных
