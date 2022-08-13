@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: center;
 }
-.pageContainer .formContainer {
+.pageContainer .contentContainer {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -59,7 +59,7 @@
   color: #162026;
   margin: 0 0 0 30px;
 }
-.pageContainer .form .inputContainer .loginInput, .pageContainer .form .inputContainer .passwordInput {
+.pageContainer .form .inputContainer .input, .pageContainer .form .inputContainer .passwordInput {
   width: 540px;
   height: 40px;
   margin: 0 0 0 20px;
@@ -70,7 +70,7 @@
   padding: 10px;
   transition: 0.5s;
 }
-.pageContainer .form .inputContainer .loginInput:focus, .pageContainer .form .inputContainer .passwordInput:focus {
+.pageContainer .form .inputContainer .input:focus, .pageContainer .form .inputContainer .passwordInput:focus {
   border: none;
   transition: 0.5s;
   transform: translate(-2px, 0);

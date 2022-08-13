@@ -19,7 +19,7 @@
   justify-content: center;
 
       //контейнер формы
-      .formContainer{
+      .contentContainer{
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
@@ -73,7 +73,7 @@
             }
 
             //неактивные поля ввода данных
-            .loginInput, .passwordInput {
+            .input, .passwordInput {
               width: 540px;
               height:40px;
               margin: 0 0 0 20px;
@@ -86,7 +86,7 @@
             }
 
             //поля ввода данных
-            .loginInput:focus, .passwordInput:focus{
+            .input:focus, .passwordInput:focus{
               border:none;
               transition:0.5s;
               transform: translate(-2px, 0);
