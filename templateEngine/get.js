@@ -1,3 +1,5 @@
+//функция для выдачи значений из хранилища
+
 export function get(obj, path) {
 
     const keys = path.split('.');

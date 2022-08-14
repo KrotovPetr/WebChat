@@ -1,5 +1,7 @@
 import {get} from "./get.js";
 
+//образец собственного шаблонизатора
+
 export class Templator {
     _TEMPLATE_REGULAR_EXPRESSION = /\{\{(.*?)\}\}/gi;
 

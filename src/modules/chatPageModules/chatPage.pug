@@ -1,0 +1,22 @@
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        title="WebChat"
+        link(rel="stylesheet" type="text/css" href="./chatPageStyles.css")
+    body
+        div(class="pageContainer")
+            div(class="listOfChats")
+                a()= "Профиль"
+                p= "Список чатов"
+                div(class= "chatContainer")
+                    div(class= "logo")
+                    div(class= "infoContainer")
+                        p(class="opData")= "Геннадий Бурков"
+                        p(class="lastMessage")= "Пойдём гулять"
+
+                    div(class="secondInfoContainer")
+                        div(class="lastMessageDate")= "12:01"
+                        div(class="mesIndContainer")= 1
+
+            div(class="chat")= "Выберите чат, чтобы начать общаться"
+

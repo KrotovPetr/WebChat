@@ -1,0 +1,30 @@
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        title="WebChat"
+        link(rel="stylesheet" type="text/css" href="./registrationPageStyles.css")
+    body
+        div(class = "pageContainer")
+            div(class = "formContainer")
+                form(class = "form")
+                    div(class = "inputContainer")
+                        p(class = "inputDescription")= "Имя"
+                        input(class = "textInput")
+                    div(class = "inputContainer")
+                        p(class = "inputDescription")= "Фамилия"
+                        input(class = "textInput")
+                    div(class = "inputContainer")
+                        p(class = "inputDescription")= "Логин"
+                        input(class = "textInput")
+                    div(class = "inputContainer")
+                        p(class = "inputDescription")= "Эл. почта"
+                        input(class = "textInput")
+                    div(class = "inputContainer")
+                        p(class = "inputDescription")= "Телефон"
+                        input(class = "textInput")
+                    div(class = "inputContainer")
+                        p(class = "inputDescription")= "Пароль"
+                        input(class = "passwordInput")
+                    button(class="formButton")
+                        a(href= "../profilePageModules/profilePage.pug")= "Регистрация"
+                a(class = "linkText", href="../loginPageModules/loginPage.pug")= "Есть аккаунт"

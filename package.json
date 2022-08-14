@@ -4,13 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel index.html",
-    "build": "parcel build index.html"
+    "dev": "parcel src/static/serverErrorPage/serverErrorPage.hbs --port 3000",
+    "build": "parcel build src/static/chatPage/chatPage.html",
+    "pug": "npm run && parcel src/index.html --port 3000"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@anikin/parcel-transformer-handlebars": "^1.0.9",
+    "@parcel/transformer-pug": "^2.7.0",
     "parcel": "^2.0.1"
+  },
+  "dependencies": {
+    "pug": "^3.0.2"
   }
 }
