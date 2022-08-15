@@ -5,7 +5,7 @@
   "scripts": {
     "build": "parcel build src/static/index.html",
     "pug": "parcel src/static/index.html --no-cache --port 3000",
-    "start": "nodemon index.js --port 3000"
+    "start": "parcel build src/static/index.html && nodemon index.js --port 3000"
   },
   "engines" : {
     "node" : "16.5.1",
