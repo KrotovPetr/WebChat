@@ -1,7 +1,7 @@
-import {templatorConnector} from "../../../templateEngine/templatorConnector.js";
-import {loginContext} from "./loginPageContext.js";
+import { templatorConnector } from '../../../templateEngine/templatorConnector.js'
+import { loginContext } from './loginPageContext.js'
 
-export function loginPage(){
+export function loginPage() {
     return ` <div class = {{"classNames.pageContainer"}}>
     <main class={{"classNames.contentContainer"}}>
         <img class={{"classNames.logo"}} />
@@ -14,14 +14,13 @@ export function loginPage(){
                 <p class={{"classNames.inputDescription"}}>{{"data.password"}}</p>
                 <input class={{"classNames.passwordInput"}} value={{"data.passwordValue"}} />
             </div>
-            <button class={{"classNames.formButton"}}><a href={{"links.profileLink"}}>{{"data.button"}}</a></button>
+            <button class={{"classNames.formButton"}}><a class={{"classNames.buttonText"}} href={{"links.profileLink"}}>{{"data.button"}}</a></button>
         </form>
         <a class={{"classNames.linkText"}} href={{"links.regLink"}}>{{"data.recoverPassword"}}</a>
         <a class={{"classNames.linkText"}} href={{"links.regLink"}}>{{"data.createAccount"}}</a>
     </main>
-</div>`;
+</div>`
 }
 
-
-const template = loginPage();
-templatorConnector(template, loginContext);
+const template = loginPage()
+templatorConnector(template, loginContext)

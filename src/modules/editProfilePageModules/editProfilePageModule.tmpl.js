@@ -1,8 +1,7 @@
-import {editContext} from "./editProfileContext.js";
-import {templatorConnector} from "../../../templateEngine/templatorConnector.js";
+import { editContext } from './editProfileContext.js'
+import { templatorConnector } from '../../../templateEngine/templatorConnector.js'
 
-
-export function editPage(){
+export function editPage() {
     return `
     <div class = {{"classNames.pageContainer"}}>
     <main class = {{"classNames.formContainer"}}>
@@ -27,13 +26,12 @@ export function editPage(){
                 <p class = {{"classNames.inputDescription"}}>{{"data.phone"}}</p>
                 <input class = {{"classNames.textInput"}} value={{"data.inputPhone"}} />
             </div>
-            <button class = {{"classNames.formButton"}}><a href={{"links.profileLink"}}>{{"data.button"}}</a></button>
+            <button class = {{"classNames.formButton"}}><a class={{"classNames.buttonText"}} href={{"links.profileLink"}}>{{"data.button"}}</a></button>
         </form>
         <a class = {{"classNames.linkText"}} href={{"links.profileLink"}}>{{"data.cancel"}}</a>
     </main>
-</div>`;
+</div>`
 }
 
-
-const template = editPage();
-templatorConnector(template, editContext);
+const template = editPage()
+templatorConnector(template, editContext)

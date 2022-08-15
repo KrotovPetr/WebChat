@@ -23,21 +23,21 @@
   align-items: center;
   justify-content: center;
 }
-.pageContainer h1 {
+.pageContainer .header {
   font-size: 96px;
   font-weight: normal;
   margin: 0 0 30px 0;
 }
-.pageContainer p {
+.pageContainer .description {
   font-size: 18px;
   font-weight: bold;
   margin: 0 0 30px 0;
 }
-.pageContainer a {
+.pageContainer .chatLink {
   font-size: 18px;
   font-weight: 500;
   text-decoration: underline;
-  color: #5852F2;
+  color: #5852f2;
   cursor: pointer;
 }
 

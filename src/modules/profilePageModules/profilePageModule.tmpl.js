@@ -1,8 +1,8 @@
-import {profileContext} from "./profilePageContext.js";
-import {templatorConnector} from "../../../templateEngine/templatorConnector.js";
+import { profileContext } from './profilePageContext.js'
+import { templatorConnector } from '../../../templateEngine/templatorConnector.js'
 
-export function profilePage(){
-    return`<div class={{"classNames.pageContainer"}}>
+export function profilePage() {
+    return `<div class={{"classNames.pageContainer"}}>
         <main class={{"classNames.contentContainer"}}>
             <div class={{"classNames.logo"}}>{{"data.logo"}}</div>
             <p class={{"classNames.login"}}>{{"data.userLogin"}}</p>
@@ -38,7 +38,8 @@ export function profilePage(){
                 <a class={{"classNames.exitOption"}} href={{"links.chatLink"}}>{{"data.exit"}}</a>
             </div>
         </main>
-    </div>`}
+    </div>`
+}
 
-const template = profilePage();
-templatorConnector(template, profileContext);
+const template = profilePage()
+templatorConnector(template, profileContext)

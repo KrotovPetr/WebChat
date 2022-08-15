@@ -1,11 +1,11 @@
-import {templatorConnector} from "../../../templateEngine/templatorConnector.js";
-import {chatContext} from "./chatPageContext.js";
+import { templatorConnector } from '../../../templateEngine/templatorConnector.js'
+import { chatContext } from './chatPageContext.js'
 
-export function chatPage(){
+export function chatPage() {
     return `<main class={{"classNames.pageContainer"}}>
     <div class={{"classNames.listOfChats"}}>
-        <a href={{"links.profileLink"}}>{{"data.profile"}}</a>
-        <p>{{"data.chatsList"}}</p>
+        <a class={{"classNames.profileLink"}} href={{"links.profileLink"}}>{{"data.profile"}}</a>
+        <p class={{"classNames.chatsHeader"}}>{{"data.chatsList"}}</p>
         <div class={{"classNames.chatContainer"}}>
             <div class={{"classNames.logo"}}></div>
             <div class={{"classNames.infoContainer"}}>
@@ -19,10 +19,8 @@ export function chatPage(){
         </div>
 
        </div>
-    <div class={{"classNames.chat"}}>{{"data.infoMessage"}}</div>`;
+    <div class={{"classNames.chat"}}>{{"data.infoMessage"}}</div>`
 }
 
-
-
-const template = chatPage();
-templatorConnector(template, chatContext);
+const template = chatPage()
+templatorConnector(template, chatContext)

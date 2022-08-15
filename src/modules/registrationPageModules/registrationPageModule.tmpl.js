@@ -1,7 +1,7 @@
-import {templatorConnector} from "../../../templateEngine/templatorConnector.js";
-import {regContext} from "./registrationPageContext.js";
+import { templatorConnector } from '../../../templateEngine/templatorConnector.js'
+import { regContext } from './registrationPageContext.js'
 
-export function regPage(){
+export function regPage() {
     return `
     <div class = {{"classNames.pageContainer"}}>
     <main class = {{"classNames.formContainer"}}>
@@ -30,14 +30,13 @@ export function regPage(){
                 <p class = {{"classNames.inputDescription"}}>{{"data.password"}}</p>
                 <input class = {{"classNames.passwordInput"}} value={{"data.inputPassword"}} />
             </div>
-            <button class = {{"classNames.formButton"}}><a href={{"links.profileLink"}}>{{"data.button"}}</a></button>
+            <button class = {{"classNames.formButton"}}><a class={{"classNames.buttonText"}} href={{"links.profileLink"}}>{{"data.button"}}</a></button>
 
         </form>
         <a class = {{"classNames.linkText"}} href={{"links.loginLink"}}>{{"data.isExist"}}</a>
     </main>
-</div>`;
+</div>`
 }
 
-
-const template = regPage();
-templatorConnector(template, regContext);
+const template = regPage()
+templatorConnector(template, regContext)

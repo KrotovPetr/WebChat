@@ -6,6 +6,6 @@ html(lang="ru")
     body
         div(class = "pageContainer")
             main(class = "contentContainer")
-                h1= 404
-                p= "Не найдено такой страницы"
-                a(href='../chatPageModules/chatPage.pug')= "Вернуться к чатам"
+                h1(class= "header")= 404
+                p(class = "description")= "Не найдено такой страницы"
+                a(class="chatLink" href='../chatPageModules/chatPage.pug')= "Вернуться к чатам"

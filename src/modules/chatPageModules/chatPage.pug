@@ -6,8 +6,8 @@ html(lang="ru")
     body
         main(class="pageContainer")
             div(class="listOfChats")
-                a(href="../profilePageModules/profilePage.pug")= "Профиль"
-                p= "Список чатов"
+                a(class="profileLink", href="../profilePageModules/profilePage.pug")= "Профиль"
+                p(class="chatsHeader")= "Список чатов"
                 div(class= "chatContainer")
                     img(class= "logo" src="https://img5.goodfon.ru/original/3000x2000/2/d7/kot-koshka-ryzhii-vzgliad-morda-fon-zelenye-glaza-kote-ko-13.jpg")
                     div(class= "infoContainer")
