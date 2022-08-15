@@ -1,0 +1,37 @@
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        title="WebChat"
+        link(rel="stylesheet" type="text/css" href="./profilePageStyles.css")
+    body
+        div(class="pageContainer")
+            main(class="contentContainer")
+                img(class = "logo" src="https://img5.goodfon.ru/original/3000x2000/2/d7/kot-koshka-ryzhii-vzgliad-morda-fon-zelenye-glaza-kote-ko-13.jpg")
+                p(class="login")="konstantinopolskykonstantinatorprocrastinator3000"
+                div(class="characterDescriptionContainer")
+                    p(class="character")= "Эл. почта"
+                    p(class="characterData")= "konstantinkonstantinopolsky@yandex.ru"
+                div(class="line")
+                div(class="characterDescriptionContainer")
+                    p(class="character")= "Логин"
+                    p(class="characterData")= "konstantinopolskykonstantinatorprocrastinator3000"
+                div(class="line")
+                div(class="characterDescriptionContainer")
+                    p(class="character")= "Имя"
+                    p(class="characterData")= "Константин"
+                div(class="line")
+                div(class="characterDescriptionContainer")
+                    p(class="character")= "Фамилия"
+                    p(class="characterData")= "Константинопольский"
+                div(class="line")
+                div(class="characterDescriptionContainer")
+                    p(class="character")= "Фамилия"
+                    p(class="characterData")= "Константинопольский"
+                div(class="line")
+                div(class="characterDescriptionContainer")
+                    p(class="character")= "Телефон"
+                    p(class="characterData")= "+7(800)555-35-35"
+                div(class="optionsContainer")
+                    p(class="option")= "Изменить пароль"
+                    a(class="option", href="../editProfilePageModules/editProfilePage.pug")= "Изменить данные"
+                    a(class="exitOption", href="../chatPageModules/chatPage.pug")= "Выйти"

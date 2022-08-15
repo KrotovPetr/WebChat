@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+//переменные с цветами проекта
+$white: #ffffff;
+$grWhite: #ebedf2;
+$grey: #999999;
+$black: #162026;
+$blViolet: #5852f2;
+$shadowColour: #bebebe;
+$red: #ff0000;
+
+//убираем дефолтные стили
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+//общий контейнер по странице
+.pageContainer {
+    width: 100%;
+    height: 100vh;
+    background: $white;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+    //контейнер формы
+    .contentContainer {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        width: 600px;
+        height: 850px;
+        box-shadow: 20px 20px 60px $shadowColour, -20px -20px 60px $white;
+        border-radius: 30px;
+    }
+
+    //картинка логотипа
+    .logo {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        height: 150px;
+        background: center no-repeat;
+        margin: 30px;
+    }
+
+    //форма заполнения данных
+    .form {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: flex-start;
+        width: 600px;
+        height: 400px;
+        row-gap: 20px;
+
+        //контейнер полей ввода
+        .inputContainer {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+            row-gap: 10px;
+
+            //описание
+            .inputDescription {
+                font-size: 18px;
+                font-weight: 500;
+                color: $black;
+                margin: 0 0 0 30px;
+                align-self: flex-start;
+            }
+
+            //неактивные поля ввода данных
+            .input,
+            .passwordInput {
+                width: 540px;
+                height: 60px;
+                border-radius: 10px;
+                background: $grWhite;
+                border: none;
+                font-size: 18px;
+                padding: 0 0 0 10px;
+                transition: 0.5s;
+            }
+
+            //поля ввода данных
+            .input:focus,
+            .passwordInput:focus {
+                border: none;
+                transition: 0.5s;
+                transform: translate(-2px, 0);
+            }
+        }
+
+        //кнопка отправки формы
+        .formButton {
+            width: 200px;
+            height: 60px;
+            background: $black;
+            color: $grWhite;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 18px;
+            border: 2px solid $black;
+            transition: 0.5s;
+            margin: 75px 0 0 0;
+        }
+
+        .formButton:hover {
+            background: $white;
+            color: $black;
+            border: 2px solid #162026;
+            transition: 0.5s;
+            transform: translate(-2px, 0);
+        }
+
+        .formButton .buttonText {
+            text-decoration: none;
+            color: $white;
+            transition: 0.5s;
+        }
+
+        .formButton:hover .buttonText {
+            color: $black;
+            transition: 0.5s;
+        }
+    }
+
+    //связи с другими страницами
+    .linkText {
+        font-size: 18px;
+        font-weight: 500;
+        color: $black;
+        margin: 5px 0 10px 0;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .linkText:hover {
+        text-decoration: underline;
+    }
+}
