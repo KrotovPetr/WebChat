@@ -2,10 +2,10 @@
   "name": "test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "pug": "npm run && parcel src/static/index.html --no-cache --port 3000",
-    "dev": "nodemon index.js --port 3000"
+    "build": "parcel build src/static/index.html",
+    "pug": "parcel src/static/index.html --no-cache --port 3000",
+    "start": "nodemon index.js --port 3000"
   },
   "engines" : {
     "node" : "16.5.1",
