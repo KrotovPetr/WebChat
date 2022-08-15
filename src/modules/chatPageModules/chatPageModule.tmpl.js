@@ -2,8 +2,8 @@ import {templatorConnector} from "../../../templateEngine/templatorConnector.js"
 import {chatContext} from "./chatPageContext.js";
 
 export function chatPage(){
-    return `<div class={{"classNames.pageContainer"}}>
-    <main class={{"classNames.listOfChats"}}>
+    return `<main class={{"classNames.pageContainer"}}>
+    <div class={{"classNames.listOfChats"}}>
         <a href={{"links.profileLink"}}>{{"data.profile"}}</a>
         <p>{{"data.chatsList"}}</p>
         <div class={{"classNames.chatContainer"}}>
@@ -18,7 +18,7 @@ export function chatPage(){
             </div>
         </div>
 
-       </main>
+       </div>
     <div class={{"classNames.chat"}}>{{"data.infoMessage"}}</div>`;
 }
 

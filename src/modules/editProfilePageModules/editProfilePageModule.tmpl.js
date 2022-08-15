@@ -5,7 +5,7 @@ import {templatorConnector} from "../../../templateEngine/templatorConnector.js"
 export function editPage(){
     return `
     <div class = {{"classNames.pageContainer"}}>
-    <div class = {{"classNames.formContainer"}}>
+    <main class = {{"classNames.formContainer"}}>
         <form class = {{"classNames.form"}}>
            <div class = {{"classNames.inputContainer"}}>
                 <p class = {{"classNames.inputDescription"}}>{{"data.name"}}</p>
@@ -30,7 +30,7 @@ export function editPage(){
             <button class = {{"classNames.formButton"}}><a href={{"links.profileLink"}}>{{"data.button"}}</a></button>
         </form>
         <a class = {{"classNames.linkText"}} href={{"links.profileLink"}}>{{"data.cancel"}}</a>
-    </div>
+    </main>
 </div>`;
 }
 

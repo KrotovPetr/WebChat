@@ -3,7 +3,7 @@ import {templatorConnector} from "../../../templateEngine/templatorConnector.js"
 
 export function profilePage(){
     return`<div class={{"classNames.pageContainer"}}>
-        <div class={{"classNames.contentContainer"}}>
+        <main class={{"classNames.contentContainer"}}>
             <div class={{"classNames.logo"}}>{{"data.logo"}}</div>
             <p class={{"classNames.login"}}>{{"data.userLogin"}}</p>
 
@@ -37,7 +37,7 @@ export function profilePage(){
                 <a class={{"classNames.option"}} href={{"links.editLink"}}>{{"data.changeData"}}</a>
                 <a class={{"classNames.exitOption"}} href={{"links.chatLink"}}>{{"data.exit"}}</a>
             </div>
-        </div>
+        </main>
     </div>`}
 
 const template = profilePage();

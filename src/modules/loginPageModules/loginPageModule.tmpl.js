@@ -3,7 +3,7 @@ import {loginContext} from "./loginPageContext.js";
 
 export function loginPage(){
     return ` <div class = {{"classNames.pageContainer"}}>
-    <div class={{"classNames.contentContainer"}}>
+    <main class={{"classNames.contentContainer"}}>
         <img class={{"classNames.logo"}} />
         <form class={{"classNames.form"}}>
             <div class={{"classNames.inputContainer"}}>
@@ -18,7 +18,7 @@ export function loginPage(){
         </form>
         <a class={{"classNames.linkText"}} href={{"links.regLink"}}>{{"data.recoverPassword"}}</a>
         <a class={{"classNames.linkText"}} href={{"links.regLink"}}>{{"data.createAccount"}}</a>
-    </div>
+    </main>
 </div>`;
 }
 

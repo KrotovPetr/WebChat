@@ -4,7 +4,7 @@ import {regContext} from "./registrationPageContext.js";
 export function regPage(){
     return `
     <div class = {{"classNames.pageContainer"}}>
-    <div class = {{"classNames.formContainer"}}>
+    <main class = {{"classNames.formContainer"}}>
         <form class = {{"classNames.form"}}>
             <div class = {{"classNames.inputContainer"}}>
                 <p class = {{"classNames.inputDescription"}}>{{"data.name"}}</p>
@@ -34,7 +34,7 @@ export function regPage(){
 
         </form>
         <a class = {{"classNames.linkText"}} href={{"links.loginLink"}}>{{"data.isExist"}}</a>
-    </div>
+    </main>
 </div>`;
 }
 
