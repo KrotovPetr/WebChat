@@ -14,13 +14,14 @@
 <h3>Ссылки:</h3>
 <ul>
     <li>Figma макет: <a>https://www.figma.com/file/cYcmqlqyIJ3I7VAGe7wcqR/WebChat?node-id=0%3A1</a></li>
+    <li>Задеплоен на сервисе Netlify: <a>https://sage-sunflower-2397b9.netlify.app</a></li>
 </ul>
 
 <hr/>
 <h3>Скрипты:</h3>
 
 <ul>
-    <li>"dev": Для запуска сервера Express</li>
-    <li>"pug": Для сервера Parcel</li>
-    <li>"build": Для сборки проекта</li>
+    <li><b>"start"</b>: Для запуска сервера Express</li>
+    <li><b>"pug"</b>: Для сервера Parcel</li>
+    <li><b>"build"</b>: Для сборки проекта</li>
 </ul>
