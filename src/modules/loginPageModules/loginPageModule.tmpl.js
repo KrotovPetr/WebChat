@@ -4,15 +4,15 @@ import {loginContext} from "./loginPageContext.js";
 export function loginPage(){
     return ` <div class = {{"classNames.pageContainer"}}>
     <div class={{"classNames.contentContainer"}}>
-        <div class={{"classNames.logo"}}>{{"data.logo"}}</div>
+        <img class={{"classNames.logo"}} />
         <form class={{"classNames.form"}}>
             <div class={{"classNames.inputContainer"}}>
                 <p class={{"classNames.inputDescription"}}>{{"data.login"}}</p>
-                <input class={{"classNames.input"}} />
+                <input class={{"classNames.input"}} value={{"data.loginValue"}} />
             </div>
             <div class={{"classNames.inputContainer"}}>
                 <p class={{"classNames.inputDescription"}}>{{"data.password"}}</p>
-                <input class={{"classNames.passwordInput"}} />
+                <input class={{"classNames.passwordInput"}} value={{"data.passwordValue"}} />
             </div>
             <button class={{"classNames.formButton"}}><a href={{"links.profileLink"}}>{{"data.button"}}</a></button>
         </form>

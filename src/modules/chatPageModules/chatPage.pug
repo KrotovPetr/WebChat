@@ -4,12 +4,12 @@ html(lang="ru")
         title="WebChat"
         link(rel="stylesheet" type="text/css" href="./chatPageStyles.css")
     body
-        div(class="pageContainer")
+        main(class="pageContainer")
             div(class="listOfChats")
-                a()= "Профиль"
+                a(href="../profilePageModules/profilePage.pug")= "Профиль"
                 p= "Список чатов"
                 div(class= "chatContainer")
-                    div(class= "logo")
+                    img(class= "logo" src="https://img5.goodfon.ru/original/3000x2000/2/d7/kot-koshka-ryzhii-vzgliad-morda-fon-zelenye-glaza-kote-ko-13.jpg")
                     div(class= "infoContainer")
                         p(class="opData")= "Геннадий Бурков"
                         p(class="lastMessage")= "Пойдём гулять"

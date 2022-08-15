@@ -39,11 +39,12 @@
   height: 100px;
   display: flex;
   flex-flow: column nowrap;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   row-gap: 10px;
 }
 .pageContainer .form .inputContainer .inputDescription {
+  align-self: flex-start;
   font-size: 18px;
   font-weight: 500;
   color: #162026;
@@ -51,13 +52,12 @@
 }
 .pageContainer .form .inputContainer .textInput, .pageContainer .form .inputContainer .passwordInput {
   width: 540px;
-  height: 40px;
-  margin: 0 0 0 20px;
+  height: 60px;
   border-radius: 10px;
   background: #EBEDF2;
   border: none;
   font-size: 18px;
-  padding: 10px;
+  padding: 0 0 0 10px;
   transition: 0.5s;
 }
 .pageContainer .form .inputContainer .textInput:focus, .pageContainer .form .inputContainer .passwordInput:focus {

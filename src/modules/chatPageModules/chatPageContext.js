@@ -21,7 +21,8 @@ export const chatContext = {
        lastMessage: "Пошли гулять в парк",
        lastMessageDate: "12:05",
        messageCount: "1",
-       infoMessage:"Выберите чат, чтобы начать общение"
+       infoMessage:"Выберите чат, чтобы начать общение",
+       logo: "https://img5.goodfon.ru/original/3000x2000/2/d7/kot-koshka-ryzhii-vzgliad-morda-fon-zelenye-glaza-kote-ko-13.jpg"
     },
     //простые функции
     functions:{
@@ -29,9 +30,9 @@ export const chatContext = {
     },
     //ссылки на другие страницы
     links:{
-        chatLink: './chatPage.html',
-        profileLink: './profilePage.html',
-        loginLink: './loginPage.html',
-        regLink: './registrationPage.html',
+        chatLink: '../chatPage/chatPage.html',
+        profileLink: '../profilePage/profilePage.html',
+        loginLink: '../loginPage/loginPage.html',
+        regLink: '../registrationPage/registrationPage.html',
     }
 }

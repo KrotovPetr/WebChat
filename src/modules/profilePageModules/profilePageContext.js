@@ -41,7 +41,7 @@ export const profileContext = {
     },
     //ссылки на другие страницы
     links:{
-        chatLink: './chatPage.html',
-        editLink: './editProfilePage.html',
+        chatLink: '../chatPage/chatPage.html',
+        editLink: '../editProfilePage/editProfilePage.html',
     }
 }

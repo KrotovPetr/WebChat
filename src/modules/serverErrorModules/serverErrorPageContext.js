@@ -16,6 +16,6 @@ export const serverErrorContext = {
     },
     //ссылки на другие страницы
     links:{
-        chatLink: './chatPage.html'
+        chatLink: '../chatPage/chatPage.html'
     }
 }

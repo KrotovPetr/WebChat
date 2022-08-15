@@ -21,6 +21,11 @@ export const editContext = {
         email:"Почта",
         login: "Логин",
         password: "Пароль",
+        inputName:"Пётр",
+        inputSurname:"Кротов",
+        inputPhone:"88005553535",
+        inputEmail:"petrkrotov2001@mail.ru",
+        inputLogin: "petrkrotov2001@mail.ru",
         button: "Сохранить",
         cancel: "Отмена",
     },
@@ -30,9 +35,9 @@ export const editContext = {
     },
     //ссылки на другие страницы
     links:{
-        chatLink: './chatPage.html',
-        profileLink: './profilePage.html',
-        loginLink: './loginPage.html',
-        regLink: './registrationPage.html',
+        chatLink: '../chatPage/chatPage.html',
+        profileLink: '../profilePage/profilePage.html',
+        loginLink: '../loginPage/loginPage.html',
+        regLink: '../registrationPage/registrationPage.html',
     }
 }

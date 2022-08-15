@@ -8,27 +8,27 @@ export function regPage(){
         <form class = {{"classNames.form"}}>
             <div class = {{"classNames.inputContainer"}}>
                 <p class = {{"classNames.inputDescription"}}>{{"data.name"}}</p>
-                <input class = {{"classNames.textInput"}} />
+                <input class = {{"classNames.textInput"}} value={{"data.inputName"}} />
             </div>
             <div class = {{"classNames.inputContainer"}}>
                 <p class = {{"classNames.inputDescription"}}>{{"data.surname"}}</p>
-                <input class = {{"classNames.textInput"}} />
+                <input class = {{"classNames.textInput"}} value={{"data.inputSurname"}} />
             </div>
             <div class = {{"classNames.inputContainer"}}>
                 <p class = {{"classNames.inputDescription"}}>{{"data.login"}}</p>
-                <input class = {{"classNames.textInput"}} />
+                <input class = {{"classNames.textInput"}} value={{"data.inputLogin"}} />
             </div>
             <div class = {{"classNames.inputContainer"}}>
                 <p class = {{"classNames.inputDescription"}}>{{"data.email"}}</p>
-                <input class = {{"classNames.textInput"}} />
+                <input class = {{"classNames.textInput"}} value={{"data.inputEmail"}} />
             </div>
             <div class = {{"classNames.inputContainer"}}>
                 <p class = {{"classNames.inputDescription"}}>{{"data.phone"}}</p>
-                <input class = {{"classNames.textInput"}} />
+                <input class = {{"classNames.textInput"}} value={{"data.inputPhone"}} />
             </div>
             <div class = {{"classNames.inputContainer"}}>
                 <p class = {{"classNames.inputDescription"}}>{{"data.password"}}</p>
-                <input class = {{"classNames.passwordInput"}} />
+                <input class = {{"classNames.passwordInput"}} value={{"data.inputPassword"}} />
             </div>
             <button class = {{"classNames.formButton"}}><a href={{"links.profileLink"}}>{{"data.button"}}</a></button>
 

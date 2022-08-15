@@ -15,12 +15,14 @@ export const loginContext = {
     },
     //общие данные
     data:{
-       logo: "Картинка",
+       logo: "utils/pict/telegram.png",
        login: "Логин",
        password: "Пароль",
        button: "Войти",
        createAccount:"Создать аккаунт",
-       recoverPassword:"Восстановить пароль"
+       recoverPassword:"Восстановить пароль",
+       loginValue: "konstantinopolskiykonstantin@yandex.ru",
+       passwordValue: "****************",
     },
     //простые функции
     functions:{
@@ -28,8 +30,8 @@ export const loginContext = {
     },
     //ссылки на другие страницы
     links:{
-        chatLink: './chatPage.html',
-        profileLink: './profilePage.html',
-        regLink: './registrationPage.html',
+        chatLink: '../chatPage/chatPage.html',
+        profileLink: '../profilePage/profilePage.html',
+        regLink: '../registrationPage/registrationPage.html',
     }
 }

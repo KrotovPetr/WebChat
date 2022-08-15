@@ -60,7 +60,7 @@
             height:100px;
             display: flex;
             flex-flow: column nowrap;
-            align-items: flex-start;
+            align-items: center;
             justify-content: center;
             row-gap: 10px;
 
@@ -70,18 +70,18 @@
               font-weight: 500;
               color: #162026;
               margin: 0 0 0 30px;
+              align-self: flex-start;
             }
 
             //неактивные поля ввода данных
             .input, .passwordInput {
               width: 540px;
-              height:40px;
-              margin: 0 0 0 20px;
+              height:60px;
               border-radius: 10px;
               background: #EBEDF2;
               border:none;
               font-size: 18px;
-              padding: 10px;
+              padding: 0 0 0 10px;
               transition:0.5s;
             }
 
