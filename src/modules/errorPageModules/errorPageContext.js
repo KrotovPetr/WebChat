@@ -3,9 +3,9 @@ export const errorContext = {
     classNames: {
         contentContainer: 'contentContainer',
         pageContainer: 'pageContainer',
-        description: "description",
-        header:"header",
-        chatLink: "chatLink"
+        description: 'description',
+        header: 'header',
+        chatLink: 'chatLink',
     },
     //общие данные
     data: {

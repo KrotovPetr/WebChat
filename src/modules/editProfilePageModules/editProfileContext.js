@@ -11,7 +11,7 @@ export const editContext = {
         passwordInput: 'passwordInput',
         formButton: 'formButton',
         linkText: 'linkText',
-        buttonText: "buttonText",
+        buttonText: 'buttonText',
     },
     //общие данные
     data: {

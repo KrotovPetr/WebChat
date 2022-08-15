@@ -11,8 +11,8 @@ export const chatContext = {
         secondInfoContainer: 'secondInfoContainer',
         lastMessageDate: 'lastMessageDate',
         mesIndContainer: 'mesIndContainer',
-        profileLink:" profileLink",
-        chatsHeader:"chatsHeader",
+        profileLink: ' profileLink',
+        chatsHeader: 'chatsHeader',
         chat: 'chat',
     },
     //общие данные
