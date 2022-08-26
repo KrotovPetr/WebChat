@@ -1,7 +1,9 @@
-import { templatorConnector } from '../../../templateEngine/templatorConnector.js'
-import { loginContext } from './loginPageContext.js'
 
-export function loginPage() {
+import { loginContext } from './loginPageContext'
+import { templatorConnector } from '../../../templateEngine/templatorConnector'
+
+
+export function loginPage():string {
     return ` <div class = {{"classNames.pageContainer"}}>
     <main class={{"classNames.contentContainer"}}>
         <img class={{"classNames.logo"}} />
@@ -22,5 +24,5 @@ export function loginPage() {
 </div>`
 }
 
-const template = loginPage()
+const template:string = loginPage()
 templatorConnector(template, loginContext)

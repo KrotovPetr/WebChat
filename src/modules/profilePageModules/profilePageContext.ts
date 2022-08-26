@@ -1,4 +1,6 @@
-export const profileContext = {
+import { TProfileContext } from './types'
+
+export const profileContext:TProfileContext = {
     //названия классов
     classNames: {
         contentContainer: 'contentContainer',

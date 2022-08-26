@@ -1,13 +1,15 @@
-export const loginContext = {
+import { TEditContext } from './types'
+
+export const editContext:TEditContext = {
     //названия классов
     classNames: {
-        contentContainer: 'contentContainer',
+        formContainer: 'formContainer',
         pageContainer: 'pageContainer',
         logo: 'logo',
         form: 'form',
         inputContainer: 'inputContainer',
         inputDescription: 'inputDescription',
-        input: 'input',
+        textInput: 'textInput',
         passwordInput: 'passwordInput',
         formButton: 'formButton',
         linkText: 'linkText',
@@ -15,14 +17,19 @@ export const loginContext = {
     },
     //общие данные
     data: {
-        logo: 'utils/pict/telegram.png',
+        name: 'Имя',
+        surname: 'Фамилия',
+        phone: 'Телефон',
+        email: 'Почта',
         login: 'Логин',
         password: 'Пароль',
-        button: 'Войти',
-        createAccount: 'Создать аккаунт',
-        recoverPassword: 'Восстановить пароль',
-        loginValue: 'konstantinopolskiykonstantin@yandex.ru',
-        passwordValue: '****************',
+        inputName: 'Пётр',
+        inputSurname: 'Кротов',
+        inputPhone: '88005553535',
+        inputEmail: 'petrkrotov2001@mail.ru',
+        inputLogin: 'petrkrotov2001@mail.ru',
+        button: 'Сохранить',
+        cancel: 'Отмена',
     },
     //простые функции
     functions: {},
@@ -30,6 +37,7 @@ export const loginContext = {
     links: {
         chatLink: '../chatPage/chatPage.html',
         profileLink: '../profilePage/profilePage.html',
+        loginLink: '../loginPage/loginPage.html',
         regLink: '../registrationPage/registrationPage.html',
     },
 }

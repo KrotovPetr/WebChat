@@ -1,7 +1,8 @@
-import { profileContext } from './profilePageContext.js'
-import { templatorConnector } from '../../../templateEngine/templatorConnector.js'
 
-export function profilePage() {
+import { profileContext } from './profilePageContext'
+import { templatorConnector } from '../../../templateEngine/templatorConnector'
+
+export function profilePage():string {
     return `<div class={{"classNames.pageContainer"}}>
         <main class={{"classNames.contentContainer"}}>
             <div class={{"classNames.logo"}}>{{"data.logo"}}</div>
@@ -41,5 +42,5 @@ export function profilePage() {
     </div>`
 }
 
-const template = profilePage()
+const template:string = profilePage()
 templatorConnector(template, profileContext)

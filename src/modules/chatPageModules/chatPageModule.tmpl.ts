@@ -1,7 +1,9 @@
-import { templatorConnector } from '../../../templateEngine/templatorConnector.js'
-import { chatContext } from './chatPageContext.js'
 
-export function chatPage() {
+import { chatContext } from './chatPageContext'
+import { templatorConnector } from '../../../templateEngine/templatorConnector'
+
+
+export function chatPage():string {
     return `<main class={{"classNames.pageContainer"}}>
     <div class={{"classNames.listOfChats"}}>
         <a class={{"classNames.profileLink"}} href={{"links.profileLink"}}>{{"data.profile"}}</a>

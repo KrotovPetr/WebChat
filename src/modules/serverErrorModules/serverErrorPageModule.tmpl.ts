@@ -1,7 +1,7 @@
 //модуль страницы ошибок 5**
+import { serverErrorContext } from './serverErrorPageContext'
+import { templatorConnector } from '../../../templateEngine/templatorConnector'
 
-import { templatorConnector } from '../../../templateEngine/templatorConnector.js'
-import { serverErrorContext } from './serverErrorPageContext.js'
 
 export function errorPage() {
     return ` <div class = {{"classNames.pageContainer"}}>
@@ -13,6 +13,5 @@ export function errorPage() {
 </div>`
 }
 
-const template = errorPage()
-const context = serverErrorContext
-templatorConnector(template, context)
+const template:string = errorPage()
+templatorConnector(template, serverErrorContext)

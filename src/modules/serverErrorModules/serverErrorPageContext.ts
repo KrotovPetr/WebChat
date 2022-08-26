@@ -1,4 +1,6 @@
-export const serverErrorContext = {
+import { TServerErrorContext } from './types'
+
+export const serverErrorContext:TServerErrorContext = {
     //названия классов
     classNames: {
         contentContainer: 'contentContainer',

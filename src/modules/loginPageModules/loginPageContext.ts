@@ -1,13 +1,15 @@
-export const regContext = {
+import { TLoginContext } from './types'
+
+export const loginContext: TLoginContext = {
     //названия классов
     classNames: {
-        formContainer: 'formContainer',
+        contentContainer: 'contentContainer',
         pageContainer: 'pageContainer',
         logo: 'logo',
         form: 'form',
         inputContainer: 'inputContainer',
         inputDescription: 'inputDescription',
-        textInput: 'textInput',
+        input: 'input',
         passwordInput: 'passwordInput',
         formButton: 'formButton',
         linkText: 'linkText',
@@ -15,20 +17,14 @@ export const regContext = {
     },
     //общие данные
     data: {
-        name: 'Имя',
-        surname: 'Фамилия',
-        phone: 'Телефон',
-        email: 'Почта',
+        logo: 'utils/pict/telegram.png',
         login: 'Логин',
         password: 'Пароль',
-        inputName: 'Пётр',
-        inputSurname: 'Кротов',
-        inputPhone: '88005553535',
-        inputEmail: 'petrkrotov2001@mail.ru',
-        inputLogin: 'petrkrotov2001@mail.ru',
-        inputPassword: '**********',
-        button: 'Регистрация',
-        isExist: 'Есть аккаунт?',
+        button: 'Войти',
+        createAccount: 'Создать аккаунт',
+        recoverPassword: 'Восстановить пароль',
+        loginValue: 'konstantinopolskiykonstantin@yandex.ru',
+        passwordValue: '****************',
     },
     //простые функции
     functions: {},
@@ -36,7 +32,6 @@ export const regContext = {
     links: {
         chatLink: '../chatPage/chatPage.html',
         profileLink: '../profilePage/profilePage.html',
-        loginLink: '../loginPage/loginPage.html',
         regLink: '../registrationPage/registrationPage.html',
     },
 }

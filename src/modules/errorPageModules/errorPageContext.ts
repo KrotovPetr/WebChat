@@ -1,4 +1,6 @@
-export const errorContext = {
+import { TErrorContext } from './types'
+
+export const errorContext:TErrorContext = {
     //названия классов
     classNames: {
         contentContainer: 'contentContainer',

@@ -1,4 +1,6 @@
-export const editContext = {
+import { TRegContext } from './types'
+
+export const regContext:TRegContext = {
     //названия классов
     classNames: {
         formContainer: 'formContainer',
@@ -26,8 +28,9 @@ export const editContext = {
         inputPhone: '88005553535',
         inputEmail: 'petrkrotov2001@mail.ru',
         inputLogin: 'petrkrotov2001@mail.ru',
-        button: 'Сохранить',
-        cancel: 'Отмена',
+        inputPassword: '**********',
+        button: 'Регистрация',
+        isExist: 'Есть аккаунт?',
     },
     //простые функции
     functions: {},

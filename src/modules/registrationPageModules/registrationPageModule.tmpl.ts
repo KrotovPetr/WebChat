@@ -1,12 +1,13 @@
-import { editContext } from './editProfileContext.js'
-import { templatorConnector } from '../../../templateEngine/templatorConnector.js'
 
-export function editPage() {
+import { regContext } from './registrationPageContext'
+import { templatorConnector } from '../../../templateEngine/templatorConnector'
+
+export function regPage() {
     return `
     <div class = {{"classNames.pageContainer"}}>
     <main class = {{"classNames.formContainer"}}>
         <form class = {{"classNames.form"}}>
-           <div class = {{"classNames.inputContainer"}}>
+            <div class = {{"classNames.inputContainer"}}>
                 <p class = {{"classNames.inputDescription"}}>{{"data.name"}}</p>
                 <input class = {{"classNames.textInput"}} value={{"data.inputName"}} />
             </div>
@@ -26,12 +27,17 @@ export function editPage() {
                 <p class = {{"classNames.inputDescription"}}>{{"data.phone"}}</p>
                 <input class = {{"classNames.textInput"}} value={{"data.inputPhone"}} />
             </div>
+            <div class = {{"classNames.inputContainer"}}>
+                <p class = {{"classNames.inputDescription"}}>{{"data.password"}}</p>
+                <input class = {{"classNames.passwordInput"}} value={{"data.inputPassword"}} />
+            </div>
             <button class = {{"classNames.formButton"}}><a class={{"classNames.buttonText"}} href={{"links.profileLink"}}>{{"data.button"}}</a></button>
+
         </form>
-        <a class = {{"classNames.linkText"}} href={{"links.profileLink"}}>{{"data.cancel"}}</a>
+        <a class = {{"classNames.linkText"}} href={{"links.loginLink"}}>{{"data.isExist"}}</a>
     </main>
 </div>`
 }
 
-const template = editPage()
-templatorConnector(template, editContext)
+const template:string = regPage()
+templatorConnector(template, regContext)

@@ -1,8 +1,9 @@
-import { errorContext } from './errorPageContext.js'
-import { templatorConnector } from '../../../templateEngine/templatorConnector.js'
-
 //одуль ошибок 4**
-export function errorPage() {
+import { errorContext } from './errorPageContext'
+import { TErrorContext } from './types'
+import { templatorConnector } from '../../../templateEngine/templatorConnector'
+
+export function errorPage():string {
     return ` <div class = {{"classNames.pageContainer"}}>
         <main class = {{"classNames.contentContainer"}}>
         <h1 class = {{"classNames.header"}}>{{"data.number"}}</h1>
@@ -12,6 +13,5 @@ export function errorPage() {
 </div>`
 }
 
-const template = errorPage()
-const context = errorContext
-templatorConnector(template, context)
+const template:string = errorPage();
+templatorConnector(template, errorContext)
