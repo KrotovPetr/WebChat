@@ -2,7 +2,6 @@
 import { chatContext } from './chatPageContext'
 import { templatorConnector } from '../../../templateEngine/templatorConnector'
 
-
 export function chatPage():string {
     return `<main class={{"classNames.pageContainer"}}>
     <div class={{"classNames.listOfChats"}}>
@@ -26,3 +25,4 @@ export function chatPage():string {
 
 const template = chatPage()
 templatorConnector(template, chatContext)
+

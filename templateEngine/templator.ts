@@ -3,8 +3,8 @@ import { get } from './get'
 
 
 export class Templator {
-    _TEMPLATE_REGULAR_EXPRESSION: RegExp = /\{\{(.*?)\}\}/gi
-    _template:string="";
+    private readonly _TEMPLATE_REGULAR_EXPRESSION: RegExp = /\{\{(.*?)\}\}/gi
+    private _template:string="";
     constructor(template: string) {
         this._template = template
     }
