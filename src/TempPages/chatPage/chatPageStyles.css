@@ -1,0 +1,258 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400&family=Roboto&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ebedf2; /* цвет дорожки */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #999999;
+  border-radius: 20px;
+}
+
+.pageContainer {
+  width: 100%;
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.pageContainer .listOfChats {
+  width: 420px;
+  height: 100vh;
+  overflow: auto;
+  background: #ebedf2;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+.pageContainer .listOfChats .profileLink {
+  font-size: 16px;
+  font-weight: 550;
+  color: #999999;
+  margin: 20px;
+  align-self: flex-start;
+  text-decoration: none;
+}
+.pageContainer .listOfChats .chatsHeader {
+  font-size: 24px;
+  font-weight: 550;
+  margin: 20px 0 10px 0;
+  color: #162026;
+}
+.pageContainer .chatContainer {
+  width: fit-content;
+  height: fit-content;
+  overflow: auto;
+}
+.pageContainer .chatContainer .chat {
+  width: 400px;
+  height: 100px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  margin: 0 0 0 5px;
+}
+.pageContainer .chatContainer .chat .logo {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: #999999;
+  margin: 0 0 0 5px;
+}
+.pageContainer .chatContainer .chat .infoContainer {
+  height: 100px;
+  width: 200px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+.pageContainer .chatContainer .chat .infoContainer .opData {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 15px 0 10px 15px;
+  color: #162026;
+}
+.pageContainer .chatContainer .chat .infoContainer .lastMessage {
+  font-size: 14px;
+  font-weight: 550;
+  margin: 0 0 0 15px;
+  color: #999999;
+}
+.pageContainer .chatContainer .chat .secondInfoContainer {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+.pageContainer .chatContainer .chat .secondInfoContainer .lastMessageDate {
+  font-size: 14px;
+  font-weight: 550;
+  margin: 0 0 0 15px;
+  color: #999999;
+  align-self: flex-end;
+}
+.pageContainer .chatContainer .chat .secondInfoContainer .mesIndContainer {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #aaa7f2;
+  align-self: flex-end;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 40px 0;
+  color: #ffffff;
+}
+.pageContainer .chatEXContainer {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  font-weight: 550;
+  font-size: 14px;
+  height: 100vh;
+}
+.pageContainer .chatEXContainer .startP {
+  color: #999999;
+}
+.pageContainer .chatEXContainer .chatHeader {
+  height: 120px;
+  width: 100%;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  border-radius: 0 0 10px 10px;
+}
+.pageContainer .chatEXContainer .chatHeader .material-symbols-outlined {
+  justify-self: flex-end;
+  margin: 0 0 0 15px;
+  cursor: pointer;
+}
+.pageContainer .chatEXContainer .chatHeader .logo {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #999999;
+  margin: 0 0 0 15px;
+}
+.pageContainer .chatEXContainer .chatHeader .friendLogin {
+  font-size: 18px;
+  color: #162026;
+  font-weight: 500;
+  margin: 0 0 0 20px;
+}
+.pageContainer .chatEXContainer .chatMainPart {
+  width: 100%;
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  overflow: auto;
+  justify-content: flex-start;
+  align-items: center;
+}
+.pageContainer .chatEXContainer .chatMainPart .chatMainPartArea {
+  margin: 10px 0 0 0;
+  display: flex;
+  flex-flow: column nowrap;
+  overflow: auto;
+  justify-content: flex-start;
+  align-items: center;
+  width: 97%;
+  row-gap: 20px;
+}
+.pageContainer .chatEXContainer .chatMainPart .chatMainPartArea .myMessageContainer {
+  background: #aaa7f2;
+  width: 715px;
+  height: fit-content;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+  border-radius: 20px;
+  margin: 0 10px 0 0;
+}
+.pageContainer .chatEXContainer .chatMainPart .chatMainPartArea .myMessageContainer .messageText {
+  padding: 15px;
+  font-style: normal;
+  color: #162026;
+  font-weight: 400;
+  font-size: 14px;
+}
+.pageContainer .chatEXContainer .chatMainPart .chatMainPartArea .myMessageContainer .messageTime {
+  align-self: flex-end;
+  margin: 0 15px 5px 0;
+}
+.pageContainer .chatEXContainer .chatMainPart .chatMainPartArea .friendMessageContainer {
+  background: #ebedf2;
+  width: 715px;
+  height: fit-content;
+  align-self: flex-start;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+}
+.pageContainer .chatEXContainer .chatMainPart .chatMainPartArea .friendMessageContainer .messageText {
+  padding: 15px;
+  font-style: normal;
+  color: #162026;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+}
+.pageContainer .chatEXContainer .chatMainPart .chatMainPartArea .friendMessageContainer .messageTime {
+  align-self: flex-end;
+  margin: 0 15px 5px 0;
+}
+.pageContainer .chatEXContainer .chatFooter {
+  height: 120px;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.pageContainer .chatEXContainer .chatFooter .messageInput {
+  width: 1300px;
+  background: #ebedf2;
+  height: 50px;
+  border: none;
+  margin: 0 0 0 15px;
+  color: #162026;
+  font-size: 14px;
+  padding: 0 0 0 20px;
+  border-radius: 20px;
+}
+.pageContainer .chatEXContainer .chatFooter .inputMessageButton {
+  width: 50px;
+  height: 50px;
+  background: #aaa7f2;
+  border-radius: 50%;
+  margin: 0 40px 0 0;
+  cursor: pointer;
+  border: none;
+}
+
+/*# sourceMappingURL=chatPageStyles.css.map */

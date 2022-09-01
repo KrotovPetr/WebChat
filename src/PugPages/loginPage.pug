@@ -1,0 +1,21 @@
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        title="WebChat"
+        link(rel="stylesheet" type="text/css" href="./loginPageStyles.css")
+    body
+div(class ="pageContainer")
+            main(class= "contentContainer")
+                img(class="logo" src="../../../utils/pict/telegram.png")
+                form(class="form")
+                    div(class="inputContainer")
+                        p(class="inputDescription")= "Логин"
+                        input(class="input" value="konstantinopolskiykonstantin@yandex.ru")
+                    div(class="inputContainer")
+                        p(class="inputDescription")= "Пароль"
+                        input(class="passwordInput" value="**********")
+                    button(class="formButton")
+                        a(class="buttonText" href="../profilePageModules/profilePage.pug")= "Войти"
+                a(class="linkText", href="../registrationPageModules/registrationPage.pug")= "Восстановить пароль"
+                a(class="linkText", href="../registrationPageModules/registrationPage.pug")= "Создать аккаунт"
+

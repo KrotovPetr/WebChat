@@ -6,8 +6,9 @@
     <li>Pug</li>
     <li>Parcel</li>
     <li>Express && Node.js</li>
-    <li>Scss</li>
-    <li>JS</li>
+    <li>SCSS</li>
+    <li>JavaScript</li>
+    <li>TypeScript</li>
 
 </ul>
 <hr/>
