@@ -66,8 +66,22 @@ class Block {
             events: Record<string, () => void>;
         };
 
-        Object.keys(events).forEach((eventName) => {
+        Object.keys(events).forEach((eventName:string) => {
             this._element?.addEventListener(eventName, events[eventName]);
+        });
+    }
+
+    _addProperties(){
+        const {properties = {}} = this.props as {
+            properties: Record<string, string>;
+        }
+        Object.keys(properties).forEach((prop) => {
+            if(prop === "class"){
+                this._element?.classList.add(properties[prop])
+            }else{
+                this._element?.setAttribute(prop, properties[prop])
+            }
+
         });
     }
 
@@ -138,6 +152,7 @@ class Block {
         // this._element!.append(fragment.toString());
 
         this._addEvents();
+        this._addProperties();
     }
 
     protected compile(
@@ -146,13 +161,10 @@ class Block {
         tmpl: string,
     ) {
         const contextAndStubs = { ...context }; //<--объект контекста
-        // console.log(contextAndStubs)
         Object.entries(this.children).forEach(([name, component]) => {
             contextAndStubs[name] = `<div data-id="${component.id}" ></div>`;
         });
         const html = template(tmpl, contextAndStubs); //<--строка
-        console.log(html);
-        // console.log(this.children)
         const temp = document.createElement('template');
         temp.innerHTML = html;
         Object.entries(this.children).forEach(([_, component]) => {
@@ -164,14 +176,10 @@ class Block {
             if (!stub) {
                 return;
             }
-            // console.log(stub.childNodes)
-            // console.log(component.getContent())
             component.getContent()?.append(...Array.from(stub.childNodes));
 
             stub.replaceWith(component.getContent()!);
         });
-        // console.log(temp.innerHTML)
-        // console.log(temp.content)
         return temp.content;
     }
 

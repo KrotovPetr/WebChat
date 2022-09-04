@@ -80,8 +80,7 @@ $red: #ff0000;
             }
 
             //неактивные поля ввода данных
-            .input,
-            .passwordInput {
+            .input{
                 width: 540px;
                 height: 60px;
                 border-radius: 10px;
@@ -93,8 +92,7 @@ $red: #ff0000;
             }
 
             //поля ввода данных
-            .input:focus,
-            .passwordInput:focus {
+            .input:focus{
                 border: none;
                 transition: 0.5s;
                 transform: translate(-2px, 0);

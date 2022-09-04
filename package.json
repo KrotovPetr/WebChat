@@ -4,7 +4,7 @@
     "description": "",
     "scripts": {
         "build": "parcel build src/TempPages/index.html",
-        "pug": "parcel src/Blocks/index.html --no-cache --port 3000",
+        "pug": "parcel src/TempPages/index.html --no-cache --port 3000",
         "start": "npm run build && nodemon index.js --port 3000",
         "dev": "parcel utils/templateEngine/index.html"
     },

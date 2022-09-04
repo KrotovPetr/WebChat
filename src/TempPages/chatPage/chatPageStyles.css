@@ -21,7 +21,7 @@
 
 .pageContainer {
   width: 100%;
-  height: 100vh;
+  max-height: 100vh;
   background: #ffffff;
   display: flex;
   flex-flow: row nowrap;
@@ -54,7 +54,7 @@
 }
 .pageContainer .chatContainer {
   width: fit-content;
-  height: fit-content;
+  max-height: fit-content;
   overflow: auto;
 }
 .pageContainer .chatContainer .chat {
@@ -120,7 +120,7 @@
   margin: 0 0 40px 0;
   color: #ffffff;
 }
-.pageContainer .chatEXContainer {
+.pageContainer .chatExContainer {
   flex: 1 1 auto;
   display: flex;
   flex-flow: column nowrap;
@@ -130,11 +130,11 @@
   font-size: 14px;
   height: 100vh;
 }
-.pageContainer .chatEXContainer .startP {
+.pageContainer .chatExContainer .startP {
   color: #999999;
 }
-.pageContainer .chatEXContainer .chatHeader {
-  height: 120px;
+.pageContainer .chatExContainer .chatHeader {
+  height: 100px;
   width: 100%;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
   display: flex;
@@ -143,25 +143,25 @@
   flex-flow: row nowrap;
   border-radius: 0 0 10px 10px;
 }
-.pageContainer .chatEXContainer .chatHeader .material-symbols-outlined {
+.pageContainer .chatExContainer .chatHeader .material-symbols-outlined {
   justify-self: flex-end;
   margin: 0 0 0 15px;
   cursor: pointer;
 }
-.pageContainer .chatEXContainer .chatHeader .logo {
+.pageContainer .chatExContainer .chatHeader .logo {
   width: 55px;
   height: 55px;
   border-radius: 50%;
   background: #999999;
   margin: 0 0 0 15px;
 }
-.pageContainer .chatEXContainer .chatHeader .friendLogin {
+.pageContainer .chatExContainer .chatHeader .friendLogin {
   font-size: 18px;
   color: #162026;
   font-weight: 500;
   margin: 0 0 0 20px;
 }
-.pageContainer .chatEXContainer .chatMainPart {
+.pageContainer .chatExContainer .chatMainPart {
   width: 100%;
   flex: 1 1 auto;
   display: flex;
@@ -170,7 +170,7 @@
   justify-content: flex-start;
   align-items: center;
 }
-.pageContainer .chatEXContainer .chatMainPart .chatMainPartArea {
+.pageContainer .chatExContainer .chatMainPart .chatMainPartArea {
   margin: 10px 0 0 0;
   display: flex;
   flex-flow: column nowrap;
@@ -180,7 +180,7 @@
   width: 97%;
   row-gap: 20px;
 }
-.pageContainer .chatEXContainer .chatMainPart .chatMainPartArea .myMessageContainer {
+.pageContainer .chatExContainer .chatMainPart .chatMainPartArea .myMessageContainer {
   background: #aaa7f2;
   width: 715px;
   height: fit-content;
@@ -192,18 +192,18 @@
   border-radius: 20px;
   margin: 0 10px 0 0;
 }
-.pageContainer .chatEXContainer .chatMainPart .chatMainPartArea .myMessageContainer .messageText {
+.pageContainer .chatExContainer .chatMainPart .chatMainPartArea .myMessageContainer .messageText {
   padding: 15px;
   font-style: normal;
   color: #162026;
   font-weight: 400;
   font-size: 14px;
 }
-.pageContainer .chatEXContainer .chatMainPart .chatMainPartArea .myMessageContainer .messageTime {
+.pageContainer .chatExContainer .chatMainPart .chatMainPartArea .myMessageContainer .messageTime {
   align-self: flex-end;
   margin: 0 15px 5px 0;
 }
-.pageContainer .chatEXContainer .chatMainPart .chatMainPartArea .friendMessageContainer {
+.pageContainer .chatExContainer .chatMainPart .chatMainPartArea .friendMessageContainer {
   background: #ebedf2;
   width: 715px;
   height: fit-content;
@@ -214,7 +214,7 @@
   align-items: flex-start;
   flex-flow: column nowrap;
 }
-.pageContainer .chatEXContainer .chatMainPart .chatMainPartArea .friendMessageContainer .messageText {
+.pageContainer .chatExContainer .chatMainPart .chatMainPartArea .friendMessageContainer .messageText {
   padding: 15px;
   font-style: normal;
   color: #162026;
@@ -222,11 +222,11 @@
   font-size: 14px;
   line-height: 19px;
 }
-.pageContainer .chatEXContainer .chatMainPart .chatMainPartArea .friendMessageContainer .messageTime {
+.pageContainer .chatExContainer .chatMainPart .chatMainPartArea .friendMessageContainer .messageTime {
   align-self: flex-end;
   margin: 0 15px 5px 0;
 }
-.pageContainer .chatEXContainer .chatFooter {
+.pageContainer .chatExContainer .chatFooter {
   height: 120px;
   width: 100%;
   display: flex;
@@ -234,7 +234,7 @@
   justify-content: space-between;
   align-items: center;
 }
-.pageContainer .chatEXContainer .chatFooter .messageInput {
+.pageContainer .chatExContainer .chatFooter .messageInput {
   width: 1300px;
   background: #ebedf2;
   height: 50px;
@@ -245,7 +245,7 @@
   padding: 0 0 0 20px;
   border-radius: 20px;
 }
-.pageContainer .chatEXContainer .chatFooter .inputMessageButton {
+.pageContainer .chatExContainer .chatFooter .inputMessageButton {
   width: 50px;
   height: 50px;
   background: #aaa7f2;

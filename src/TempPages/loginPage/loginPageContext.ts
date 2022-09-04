@@ -33,5 +33,6 @@ export const loginContext: TLoginContext = {
         chatLink: '../chatPage/chatPage.html',
         profileLink: '../profilePage/profilePage.html',
         regLink: '../registrationPage/registrationPage.html',
+        picLink: '../../../utils/pict/telegram.png',
     },
 };

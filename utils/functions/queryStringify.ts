@@ -1,6 +1,6 @@
 export function queryStringify(data: any): string {
     if(typeof data === "undefined"){
-        return "";
+        return '';
     }else{
         let str: string = "";
 
@@ -8,7 +8,7 @@ export function queryStringify(data: any): string {
             str+=`${keys}=${data[keys]}*`;
         }
         str = str.replaceAll("*", "&")
-        return "?"+str.slice(0,str.length-1);
+        return `?${str.slice(0, str.length - 1)}`;
     }
 
 }

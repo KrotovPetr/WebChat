@@ -30,5 +30,6 @@ export type TLoginContext = {
         chatLink: string;
         profileLink: string;
         regLink: string;
+        picLink: string;
     };
 };

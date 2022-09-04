@@ -72,8 +72,7 @@ $stuffColour: #d9d9d9;
             }
 
             //неактивные поля ввода данных
-            .textInput,
-            .passwordInput {
+            .input{
                 width: 540px;
                 height: 60px;
                 border-radius: 10px;
@@ -85,8 +84,7 @@ $stuffColour: #d9d9d9;
             }
 
             //поля ввода данных
-            .textInput:focus,
-            .passwordInput:focus {
+            .input:focus{
                 border: none;
                 transition: 0.5s;
                 transform: translate(-2px, 0);

@@ -1,20 +1,17 @@
 import Block from '../../../utils/templateEngine/block';
 import { TTemplatorContext } from '../../../utils/types/types';
 import { templatorConnector } from '../../../utils/templateEngine/templatorConnector';
-import { Input } from '../../Components/Input/Input';
-import { formBlock } from './form.tmpl';
+import { buttonComponent } from './button.tmpl';
 
-export class Form extends Block {
+export class Button extends Block {
     constructor(props: TTemplatorContext) {
-        super('form', props);
+        super('button', props);
     }
 
-    init() {
-        this.children.input = new Input({});
-    }
+    init() {}
 
     render() {
-        let tmpl = formBlock();
+        let tmpl = buttonComponent();
         return this.compile(templatorConnector, this.props, tmpl);
     }
 }
