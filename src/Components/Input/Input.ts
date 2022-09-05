@@ -1,16 +1,28 @@
 import Block from '../../../utils/templateEngine/block';
-import { TTemplatorContext } from '../../../utils/types/types';
 import { templatorConnector } from '../../../utils/templateEngine/templatorConnector';
+import { inputComponent } from './input.tmpl';
 
+type TInput = {
+    properties: { id: any; type: any; class: string };
+    events: {
+        blur: (e: MouseEvent) => void;
+        focus: (e: MouseEvent) => void;
+        click: (e: MouseEvent) => void;
+    };
+};
+/**
+ * Класс, собирающий блок с полем ввода
+ * Расширяет класс Block
+ */
 export class Input extends Block {
-    constructor(props: TTemplatorContext) {
+    constructor(props: TInput) {
         super('input', props);
     }
 
     init() {}
 
     render() {
-        let tmpl = '';
+        let tmpl = inputComponent();
         return this.compile(templatorConnector, this.props, tmpl);
     }
 }

@@ -3,6 +3,7 @@
         "es6": true
     },
     "plugins": ["prettier"],
+    "ignorePatterns": ["dist/", "node-modules", "*.tmpl.js", ""],
     "rules": {
         "no-var": "error",
         "semi": "error",

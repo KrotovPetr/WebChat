@@ -16,42 +16,20 @@ export function chatPage(): string {
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="chatExContainer">
-            <div class="chatHeader"><img class={{"classNames.logo"}} src="https://img5.goodfon.ru/original/3000x2000/2/d7/kot-koshka-ryzhii-vzgliad-morda-fon-zelenye-glaza-kote-ko-13.jpg" />
-                <p class="friendLogin">Константинопольский Константин Константинович</p><span class="material-symbols-outlined">more_vert</span>
-            </div>
-            <div class="chatMainPart">
-                <div class="chatMainPartArea">
-                    <div class="friendMessageContainer">
-                        <p class="messageText">Аналогия, конечно, откровенна. Интересно отметить, что гравитационный парадокс решительно раскладывает на элементы неоднозначный дедуктивный метод, tertium nоn datur. Позитивизм выводит закон исключённого третьего, отрицая очевидное. Платоновская академия, как следует из вышесказанного, амбивалентно подрывает гений, не учитывая мнения авторитетов. Заблуждение порождает и обеспечивает трансцендентальный дуализм, учитывая опасность, которую представляли собой писания Дюринга для не окрепшего еще немецкого рабочего движения.</p>
-                        <p class="messageTime">11:59</p>
+             <div class={{"classNames.chatContainer"}}>
+                <div class={{"classNames.chat"}}>
+                <img class={{"classNames.logo"}} src="https://npk.asou-mo.ru/images/2021/09/16/chu5ugbwgaaslnx.jpg" alt="Friend photo"/>
+                    <div class={{"classNames.infoContainer"}}>
+                        <p class={{"classNames.opData"}}>Максим Максимов</p>
+                        <p class={{"classNames.lastMessage"}}>Тебе Геннадий Бурков писал?</p>
                     </div>
-                    <div class="myMessageContainer">
-                        <p class="messageText">Очень приятно)</p>
-                        <p class="messageTime">12:01</p>
-                    </div>
-                     <div class="friendMessageContainer">
-                        <p class="messageText">Аналогия, конечно, откровенна. Интересно отметить, что гравитационный парадокс решительно раскладывает на элементы неоднозначный дедуктивный метод, tertium nоn datur. Позитивизм выводит закон исключённого третьего, отрицая очевидное. Платоновская академия, как следует из вышесказанного, амбивалентно подрывает гений, не учитывая мнения авторитетов. Заблуждение порождает и обеспечивает трансцендентальный дуализм, учитывая опасность, которую представляли собой писания Дюринга для не окрепшего еще немецкого рабочего движения.</p>
-                        <p class="messageTime">11:59</p>
-                    </div>
-                    <div class="myMessageContainer">
-                        <p class="messageText">Очень приятно)</p>
-                        <p class="messageTime">12:01</p>
-                    </div>
-                     <div class="friendMessageContainer">
-                        <p class="messageText">Аналогия, конечно, откровенна. Интересно отметить, что гравитационный парадокс решительно раскладывает на элементы неоднозначный дедуктивный метод, tertium nоn datur. Позитивизм выводит закон исключённого третьего, отрицая очевидное. Платоновская академия, как следует из вышесказанного, амбивалентно подрывает гений, не учитывая мнения авторитетов. Заблуждение порождает и обеспечивает трансцендентальный дуализм, учитывая опасность, которую представляли собой писания Дюринга для не окрепшего еще немецкого рабочего движения.</p>
-                        <p class="messageTime">11:59</p>
-                    </div>
-                    <div class="myMessageContainer">
-                        <p class="messageText">Очень приятно)</p>
-                        <p class="messageTime">12:01</p>
+                    <div class={{"classNames.secondInfoContainer"}}>
+                        <div class={{"classNames.lastMessageDate"}}>11:33</div>
+                        <div class={{"classNames.mesIndContainer"}}>1</div>
                     </div>
                 </div>
             </div>
-            <div class="chatFooter"><input class="messageInput" type="text" placeholder="Введите сообщение" /><button class="inputMessageButton">
-            <span class="material-symbols-outlined">arrow_forward</span>
-            </button></div>
         </div>
+        {{chatBlock}}
     </main>`;
 }

@@ -1,6 +1,3 @@
-import { loginContext } from './loginPageContext';
-import { templatorConnector } from '../../../utils/templateEngine/templatorConnector';
-
 export function loginPage(): string {
     return ` <div class = {{"classNames.pageContainer"}}>
     <main class={{"classNames.contentContainer"}}>

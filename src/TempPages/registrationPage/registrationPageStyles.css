@@ -1,14 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
 * {
   padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
 .pageContainer {
   width: 100%;
   height: 100vh;
-  background: #ffffff;
+  background: #fff;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -21,7 +21,7 @@
   justify-content: center;
   width: 600px;
   height: 850px;
-  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #fff;
   border-radius: 30px;
 }
 .pageContainer .form {
@@ -78,7 +78,7 @@
   transition: 0.5s;
 }
 .pageContainer .form .formButton:hover {
-  background: #ffffff;
+  background: #fff;
   color: #162026;
   border: 2px solid #162026;
   transition: 0.5s;
@@ -86,7 +86,7 @@
 }
 .pageContainer .form .formButton .buttonText {
   text-decoration: none;
-  color: #ffffff;
+  color: #fff;
   transition: 0.5s;
 }
 .pageContainer .form .formButton:hover .buttonText {
@@ -97,7 +97,7 @@
   font-size: 18px;
   font-weight: 500;
   color: #162026;
-  margin: 15px 0 0 0;
+  margin: 15px 0 0;
   cursor: pointer;
   text-decoration: none;
 }

@@ -66,22 +66,21 @@ class Block {
             events: Record<string, () => void>;
         };
 
-        Object.keys(events).forEach((eventName:string) => {
+        Object.keys(events).forEach((eventName: string) => {
             this._element?.addEventListener(eventName, events[eventName]);
         });
     }
 
-    _addProperties(){
-        const {properties = {}} = this.props as {
+    _addProperties() {
+        const { properties = {} } = this.props as {
             properties: Record<string, string>;
-        }
+        };
         Object.keys(properties).forEach((prop) => {
-            if(prop === "class"){
-                this._element?.classList.add(properties[prop])
-            }else{
-                this._element?.setAttribute(prop, properties[prop])
+            if (prop === 'class') {
+                this._element?.classList.add(properties[prop]);
+            } else {
+                this._element?.setAttribute(prop, properties[prop]);
             }
-
         });
     }
 
@@ -129,6 +128,7 @@ class Block {
         }
     }
 
+    // @ts-ignore
     protected componentDidUpdate(oldProps: any, newProps: any) {
         return true;
     }

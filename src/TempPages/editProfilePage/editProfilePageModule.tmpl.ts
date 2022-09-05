@@ -1,6 +1,3 @@
-import { editContext } from './editProfileContext';
-import { templatorConnector } from '../../../utils/templateEngine/templatorConnector';
-
 export function editPage(): string {
     return `
     <div class = {{"classNames.pageContainer"}}>

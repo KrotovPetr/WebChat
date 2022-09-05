@@ -4,19 +4,19 @@ import { TTemplatorContext } from '../types/types';
 //образец собственного шаблонизатора
 
 export class Templator {
-    _TEMPLATE_REGULAR_EXPRESSION = /\{\{(.*?)\}\}/gi;
+    _TEMPLATE_REGULAR_EXPRESSION = /{{(.*?)}}/gi;
     _template: string;
-    constructor(template) {
+    constructor(template: string) {
         this._template = template;
     }
 
-    compile(ctx) {
+    compile(ctx: TTemplatorContext) {
         return this._compileTemplate(this._template, ctx);
     }
 
-    _compileTemplate(template, ctx) {
+    _compileTemplate(template: string, ctx: TTemplatorContext) {
         // console.log(ctx)
-        let tmpl: string = this._template;
+        let tmpl: string = template;
         let tmpl2: string = tmpl; //<-- был баг в коде с теории, некоторые переменные не отрабатывались регуляркой, вопрос решился введением копии, дабы н зацикливаться и не пропускать данные
         let key: null | RegExpExecArray = null;
         const regExp: RegExp = this._TEMPLATE_REGULAR_EXPRESSION;

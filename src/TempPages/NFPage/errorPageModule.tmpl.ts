@@ -1,7 +1,4 @@
 //одуль ошибок 4**
-import { errorContext } from './errorPageContext';
-import { TErrorContext } from './types';
-import { templatorConnector } from '../../../utils/templateEngine/templatorConnector';
 
 export function errorPage(): string {
     return ` <div class = {{"classNames.pageContainer"}}>

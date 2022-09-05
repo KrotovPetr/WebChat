@@ -1,9 +1,9 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400&family=Roboto&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@100;400&family=Roboto&display=swap";
 * {
   padding: 0;
   margin: 0;
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -15,14 +15,14 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #999999;
+  background-color: #999;
   border-radius: 20px;
 }
 
 .pageContainer {
   width: 100%;
   max-height: 100vh;
-  background: #ffffff;
+  background: #fff;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -41,7 +41,7 @@
 .pageContainer .listOfChats .profileLink {
   font-size: 16px;
   font-weight: 550;
-  color: #999999;
+  color: #999;
   margin: 20px;
   align-self: flex-start;
   text-decoration: none;
@@ -49,7 +49,7 @@
 .pageContainer .listOfChats .chatsHeader {
   font-size: 24px;
   font-weight: 550;
-  margin: 20px 0 10px 0;
+  margin: 20px 0 10px;
   color: #162026;
 }
 .pageContainer .chatContainer {
@@ -71,7 +71,7 @@
   width: 65px;
   height: 65px;
   border-radius: 50%;
-  background: #999999;
+  background: #999;
   margin: 0 0 0 5px;
 }
 .pageContainer .chatContainer .chat .infoContainer {
@@ -91,7 +91,7 @@
   font-size: 14px;
   font-weight: 550;
   margin: 0 0 0 15px;
-  color: #999999;
+  color: #999;
 }
 .pageContainer .chatContainer .chat .secondInfoContainer {
   height: 100px;
@@ -104,7 +104,7 @@
   font-size: 14px;
   font-weight: 550;
   margin: 0 0 0 15px;
-  color: #999999;
+  color: #999;
   align-self: flex-end;
 }
 .pageContainer .chatContainer .chat .secondInfoContainer .mesIndContainer {
@@ -117,8 +117,8 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  margin: 0 0 40px 0;
-  color: #ffffff;
+  margin: 0 0 40px;
+  color: #fff;
 }
 .pageContainer .chatExContainer {
   flex: 1 1 auto;
@@ -131,7 +131,7 @@
   height: 100vh;
 }
 .pageContainer .chatExContainer .startP {
-  color: #999999;
+  color: #999;
 }
 .pageContainer .chatExContainer .chatHeader {
   height: 100px;
@@ -152,7 +152,7 @@
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  background: #999999;
+  background: #999;
   margin: 0 0 0 15px;
 }
 .pageContainer .chatExContainer .chatHeader .friendLogin {
@@ -171,7 +171,7 @@
   align-items: center;
 }
 .pageContainer .chatExContainer .chatMainPart .chatMainPartArea {
-  margin: 10px 0 0 0;
+  margin: 10px 0 0;
   display: flex;
   flex-flow: column nowrap;
   overflow: auto;

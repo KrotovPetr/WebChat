@@ -1,6 +1,3 @@
-import { profileContext } from './profilePageContext';
-import { templatorConnector } from '../../../utils/templateEngine/templatorConnector';
-
 export function profilePage(): string {
     return `<div class={{"classNames.pageContainer"}}>
         <main class={{"classNames.contentContainer"}}>
