@@ -1,13 +1,5 @@
+@import '../../../utils/styles/_colours';
 @import "https://fonts.googleapis.com/css2?family=Inter:wght@100;400&family=Roboto&display=swap";
-
-// переменные с цветами проекта
-$white: #fff;
-$grWhite: #ebedf2;
-$grey: #999;
-$black: #162026;
-$blViolet: #5852f2;
-$violet: #aaa7f2;
-
 // убираем дефолтные стили
 * {
   padding: 0;

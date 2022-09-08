@@ -3,7 +3,6 @@
 <hr/>
 <h3>Для реализации использованы:</h3>
 <ul>
-    <li>Pug</li>
     <li>Parcel</li>
     <li>Express && Node.js</li>
     <li>SCSS</li>

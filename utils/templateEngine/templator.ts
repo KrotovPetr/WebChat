@@ -1,5 +1,4 @@
 import { get } from './get';
-import { TTemplatorContext } from '../types/types';
 
 //образец собственного шаблонизатора
 
@@ -10,11 +9,11 @@ export class Templator {
         this._template = template;
     }
 
-    compile(ctx: TTemplatorContext) {
+    compile(ctx: any) {
         return this._compileTemplate(this._template, ctx);
     }
 
-    _compileTemplate(template: string, ctx: TTemplatorContext) {
+    _compileTemplate(template: string, ctx: any) {
         // console.log(ctx)
         let tmpl: string = template;
         let tmpl2: string = tmpl; //<-- был баг в коде с теории, некоторые переменные не отрабатывались регуляркой, вопрос решился введением копии, дабы н зацикливаться и не пропускать данные
@@ -24,7 +23,7 @@ export class Templator {
         // Важно делать exec именно через константу, иначе уйдёте в бесконечный цикл
         while ((key = regExp.exec(tmpl))) {
             if (key[1]) {
-                const data: string | TTemplatorContext | undefined = get(
+                const data: string | any | undefined = get(
                     ctx,
                     key[1],
                 );

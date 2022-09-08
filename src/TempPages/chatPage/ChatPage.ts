@@ -1,11 +1,10 @@
 import Block from '../../../utils/templateEngine/block';
 import { templatorConnector } from '../../../utils/templateEngine/templatorConnector';
-import { chatPage } from './chatPageModule.tmpl';
-import { TTemplatorContext } from '../../../utils/types/types';
+import { chatPageTemplate } from './chatPageModule.tmpl';
 import { ChatBlock } from '../../Blocks/ChatBlock/ChatBlock';
 
 export class ChatPage extends Block {
-    constructor(props: TTemplatorContext) {
+    constructor(props: any) {
         super('div', props);
     }
 
@@ -18,7 +17,6 @@ export class ChatPage extends Block {
     }
 
     render() {
-        let tmpl = chatPage();
-        return this.compile(templatorConnector, this.props, tmpl);
+        return this.compile(templatorConnector, this.props, chatPageTemplate());
     }
 }

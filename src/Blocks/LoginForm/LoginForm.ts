@@ -1,8 +1,8 @@
 import Block from '../../../utils/templateEngine/block';
 import { templatorConnector } from '../../../utils/templateEngine/templatorConnector';
 import { Button } from '../../Components/Button/Button';
-import { InputContainer } from '../InputContainer/InputContainer';
-import { loginFormBlock } from './login-form.tmpl';
+import { ValidateInput } from '../ValidateInput/ValidateInput';
+import { loginFormBlockTemplate } from './login-form.tmpl';
 
 type TLoginForm = {
     events: { submit: (e: Event) => void };
@@ -20,7 +20,7 @@ export class LoginForm extends Block {
     }
 
     init() {
-        this.children.inputContainer1 = new InputContainer({
+        this.children.inputContainer1 = new ValidateInput({
             inputProp: {
                 type: 'text',
                 name: 'login',
@@ -32,7 +32,7 @@ export class LoginForm extends Block {
             },
         });
 
-        this.children.inputContainer2 = new InputContainer({
+        this.children.inputContainer2 = new ValidateInput({
             inputProp: {
                 type: 'password',
                 name: 'password',
@@ -59,7 +59,6 @@ export class LoginForm extends Block {
     }
 
     render() {
-        let tmpl = loginFormBlock();
-        return this.compile(templatorConnector, this.props, tmpl);
+        return this.compile(templatorConnector, this.props, loginFormBlockTemplate());
     }
 }

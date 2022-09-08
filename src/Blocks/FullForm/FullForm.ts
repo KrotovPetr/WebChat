@@ -1,8 +1,8 @@
 import Block from '../../../utils/templateEngine/block';
 import { templatorConnector } from '../../../utils/templateEngine/templatorConnector';
 import { Button } from '../../Components/Button/Button';
-import { regFormBlock } from './full-form.tmpl';
-import { InputContainer } from '../InputContainer/InputContainer';
+import { regFormBlockTemplate } from './full-form.tmpl';
+import { ValidateInput } from '../ValidateInput/ValidateInput';
 
 type TFullForm = {
     label: string;
@@ -21,7 +21,7 @@ export class FullForm extends Block {
     }
 
     init() {
-        this.children.inputContainer1 = new InputContainer({
+        this.children.inputContainerFirstName = new ValidateInput({
             inputProp: {
                 type: 'text',
                 data: 'Имя',
@@ -32,7 +32,7 @@ export class FullForm extends Block {
                 class: 'inputContainer',
             },
         });
-        this.children.inputContainer2 = new InputContainer({
+        this.children.inputContainerLastName = new ValidateInput({
             inputProp: {
                 type: 'text',
                 name: 'last_name',
@@ -43,7 +43,7 @@ export class FullForm extends Block {
                 class: 'inputContainer',
             },
         });
-        this.children.inputContainer3 = new InputContainer({
+        this.children.inputContainerLogin = new ValidateInput({
             inputProp: {
                 data: 'Логин',
                 name: 'login',
@@ -54,7 +54,7 @@ export class FullForm extends Block {
                 class: 'inputContainer',
             },
         });
-        this.children.inputContainer4 = new InputContainer({
+        this.children.inputContainerEmail = new ValidateInput({
             inputProp: {
                 type: 'text',
                 name: 'email',
@@ -65,7 +65,7 @@ export class FullForm extends Block {
                 class: 'inputContainer',
             },
         });
-        this.children.inputContainer5 = new InputContainer({
+        this.children.inputContainerPassword = new ValidateInput({
             inputProp: {
                 type: 'text',
                 name: 'password',
@@ -76,7 +76,7 @@ export class FullForm extends Block {
                 class: 'inputContainer',
             },
         });
-        this.children.inputContainer6 = new InputContainer({
+        this.children.inputContainerPhone = new ValidateInput({
             inputProp: {
                 type: 'text',
                 name: 'phone',
@@ -98,7 +98,6 @@ export class FullForm extends Block {
     }
 
     render() {
-        let tmpl = regFormBlock();
-        return this.compile(templatorConnector, this.props, tmpl);
+        return this.compile(templatorConnector, this.props, regFormBlockTemplate());
     }
 }

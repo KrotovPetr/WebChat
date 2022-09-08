@@ -1,10 +1,10 @@
-export function loginPage(): string {
-    return ` <div class = {{"classNames.pageContainer"}}>
-    <main class={{"classNames.contentContainer"}}>
-        <img class={{"classNames.logo"}} src={{"links.picLink"}} alt="WebChat logo"/>
-        {{"loginForm"}}
-        <a class={{"classNames.linkText"}} href={{"links.regLink"}}>{{"data.recoverPassword"}}</a>
-        <a class={{"classNames.linkText"}} href={{"links.regLink"}}>{{"data.createAccount"}}</a>
+export function loginPageTemplate(): string {
+    return ` <div class = "pageContainer">
+    <main class="contentContainer">
+        <img class="logo" src='../../../utils/pict/telegram.png' alt="WebChat logo"/>
+        {{loginForm}}
+        <a class="linkText" href='../registrationPage/registrationPage.html'>Восстановить пароль</a>
+        <a class="linkText" href='../registrationPage/registrationPage.html'>Создать аккаунт</a>
     </main>
 </div>`;
 }

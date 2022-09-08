@@ -23,6 +23,7 @@ const METHODS:TMethods = {
 
 
 
+// @ts-ignore
 class HTTPTransport {
     get = (url: string, options: {} | TOptions = {}) => {
         let dataOp = queryStringify(options.data);

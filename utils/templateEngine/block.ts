@@ -1,7 +1,8 @@
-import { nanoid } from 'nanoid';
-import { EventBus } from './event-bus';
 
-// Нельзя создавать экземпляр данного класса
+import { EventBus } from './event-bus';
+import { nanoid } from 'nanoid';
+
+
 class Block {
     static EVENTS = {
         INIT: 'init',

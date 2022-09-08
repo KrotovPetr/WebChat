@@ -3,7 +3,7 @@
  * @return string
  *
  */
-export function sendButtonComponent() {
+export function sendButtonComponentTemplate() {
     return `
        <span class="material-symbols-outlined">{{"icon"}}</span>
     `;

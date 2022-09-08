@@ -3,14 +3,14 @@
  * @return string
  */
 
-export function regFormBlock() {
+export function regFormBlockTemplate() {
     return `
-        {{inputContainer1}}
-        {{inputContainer2}}
-        {{inputContainer3}}
-        {{inputContainer4}}
-        {{inputContainer5}}
-        {{inputContainer6}}
+        {{inputContainerFirstName}}
+        {{inputContainerLastName}}
+        {{inputContainerLogin}}
+        {{inputContainerEmail}}
+        {{inputContainerPassword}}
+        {{inputContainerPhone}}
         {{button}}
     `;
 }

@@ -1,9 +1,9 @@
-export function regPage() {
+export function regPageTemplate() {
     return `
-    <div class = {{"classNames.pageContainer"}}>
-    <main class = {{"classNames.formContainer"}}>
-       {{"regForm"}}
-        <a class = {{"classNames.linkText"}} href={{"links.loginLink"}}>{{"data.isExist"}}</a>
+    <div class = "pageContainer">
+    <main class = "formContainer">
+       {{regForm}}
+        <a class = "linkText" href="../loginPage/loginPage.html">Есть аккаунт?</a>
     </main>
 </div>`;
 }

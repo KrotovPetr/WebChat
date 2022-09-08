@@ -1,9 +1,9 @@
-export function editPage(): string {
+export function editPageTemplate(): string {
     return `
-    <div class = {{"classNames.pageContainer"}}>
-    <main class = {{"classNames.formContainer"}}>
+    <div class = "pageContainer">
+    <main class = "formContainer">
         {{editForm}}
-        <a class = {{"classNames.linkText"}} href={{"links.profileLink"}}>{{"data.cancel"}}</a>
+        <a class = "linkText" href="../profilePage/profilePage.html">Отмена</a>
     </main>
 </div>`;
 }

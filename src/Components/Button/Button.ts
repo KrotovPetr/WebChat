@@ -1,6 +1,6 @@
 import Block from '../../../utils/templateEngine/block';
 import { templatorConnector } from '../../../utils/templateEngine/templatorConnector';
-import { buttonComponent } from './button.tmpl';
+import { buttonComponentTemplate } from './button.tmpl';
 
 type TButton = {
     label: string;
@@ -19,7 +19,6 @@ export class Button extends Block {
     init() {}
 
     render() {
-        let tmpl = buttonComponent();
-        return this.compile(templatorConnector, this.props, tmpl);
+        return this.compile(templatorConnector, this.props,buttonComponentTemplate());
     }
 }

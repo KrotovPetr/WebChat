@@ -1,11 +1,10 @@
 import Block from '../../../utils/templateEngine/block';
-import { editPage } from './editProfilePageModule.tmpl';
+import { editPageTemplate } from './editProfilePageModule.tmpl';
 import { templatorConnector } from '../../../utils/templateEngine/templatorConnector';
-import { TTemplatorContext } from '../../../utils/types/types';
 import { FullForm } from '../../Blocks/FullForm/FullForm';
 
 export class EditPage extends Block {
-    constructor(props: TTemplatorContext) {
+    constructor(props: any) {
         super('div', props);
     }
 
@@ -17,8 +16,8 @@ export class EditPage extends Block {
                     e.preventDefault();
                     let form = document.getElementsByClassName('regForm')[0];
                     let inputs = form.getElementsByTagName('input');
-                    for (let i of inputs) {
-                        console.log(i.value);
+                    for (let input of inputs) {
+                        console.log(input.value);
                     }
                 },
             },
@@ -29,7 +28,6 @@ export class EditPage extends Block {
     }
 
     render() {
-        let tmpl = editPage();
-        return this.compile(templatorConnector, this.props, tmpl);
+        return this.compile(templatorConnector, this.props, editPageTemplate());
     }
 }

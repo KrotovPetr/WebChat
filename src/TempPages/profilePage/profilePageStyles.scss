@@ -1,16 +1,5 @@
 @import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
-
-// переменные с цветами проекта
-$white: #fff;
-$grWhite: #ebedf2;
-$grey: #999;
-$black: #162026;
-$blViolet: #5852f2;
-$shadowColour: #bebebe;
-$red: #f00;
-
-// служебные цвета(могут уйти в будущем, используются для подсветок)
-$stuffColour: #d9d9d9;
+@import '../../../utils/styles/_colours';
 
 * {
   padding: 0;

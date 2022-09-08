@@ -1,6 +1,6 @@
 import Block from '../../../utils/templateEngine/block';
 import { templatorConnector } from '../../../utils/templateEngine/templatorConnector';
-import { sendButtonComponent } from './send-button.tmpl';
+import { sendButtonComponentTemplate } from './send-button.tmpl';
 
 type TSendButton = {
     icon: string;
@@ -20,7 +20,6 @@ export class SendButton extends Block {
     init() {}
 
     render() {
-        let tmpl = sendButtonComponent();
-        return this.compile(templatorConnector, this.props, tmpl);
+        return this.compile(templatorConnector, this.props, sendButtonComponentTemplate());
     }
 }

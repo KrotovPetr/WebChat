@@ -1,6 +1,6 @@
 import Block from '../../../utils/templateEngine/block';
 import { templatorConnector } from '../../../utils/templateEngine/templatorConnector';
-import { chatBlock } from './chat-block.tmpl';
+import { chatBlockTemplate } from './chat-block.tmpl';
 import { SendButton } from '../../Components/SendButton/SendButton';
 
 type TChatBlock = {
@@ -38,7 +38,6 @@ export class ChatBlock extends Block {
     }
 
     render() {
-        let tmpl = chatBlock();
-        return this.compile(templatorConnector, this.props, tmpl);
+        return this.compile(templatorConnector, this.props, chatBlockTemplate());
     }
 }

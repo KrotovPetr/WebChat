@@ -1,13 +1,12 @@
 import Block from '../../../utils/templateEngine/block';
 import { templatorConnector } from '../../../utils/templateEngine/templatorConnector';
-import { TTemplatorContext } from '../../../utils/types/types';
-import { loginPage } from './loginPageModule.tmpl';
+import { loginPageTemplate } from './loginPageModule.tmpl';
 import { LoginForm } from '../../Blocks/LoginForm/LoginForm';
 import { passwordValidation } from '../../../utils/functions/passwordValidation';
 import { loginValidation } from '../../../utils/functions/loginValidation';
 
 export class LoginPage extends Block {
-    constructor(props: TTemplatorContext) {
+    constructor(props: any) {
         super('form', props);
     }
 
@@ -28,14 +27,14 @@ export class LoginPage extends Block {
                             message: string;
                         } | null = null;
                         let flag: boolean = true;
-                        for (let i of inputs) {
-                            console.log(i.value);
-                            switch (i.getAttribute('id')) {
+                        for (let input of inputs) {
+                            console.log(input.value);
+                            switch (input.getAttribute('id')) {
                                 case 'password':
-                                    valResult = passwordValidation(i.value);
+                                    valResult = passwordValidation(input.value);
                                     break;
                                 case 'login':
-                                    valResult = loginValidation(i.value);
+                                    valResult = loginValidation(input.value);
                                     break;
                             }
                             if (valResult !== null) {
@@ -43,9 +42,9 @@ export class LoginPage extends Block {
                             }
                             if (valResult) {
                                 if (!valResult.success) {
-                                    i.style.border = '2px solid red';
+                                    input.style.border = '2px solid red';
                                     let p =
-                                        i.previousElementSibling as HTMLElement;
+                                        input.previousElementSibling as HTMLElement;
 
                                     if (typeof p !== 'undefined') {
                                         p.innerHTML = valResult.message;
@@ -68,7 +67,6 @@ export class LoginPage extends Block {
     }
 
     render() {
-        let tmpl = loginPage();
-        return this.compile(templatorConnector, this.props, tmpl);
+        return this.compile(templatorConnector, this.props, loginPageTemplate());
     }
 }

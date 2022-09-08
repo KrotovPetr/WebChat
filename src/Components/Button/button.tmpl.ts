@@ -4,7 +4,7 @@
  *
  */
 
-export function buttonComponent() {
+export function buttonComponentTemplate() {
     return `
        {{"label"}}
     `;

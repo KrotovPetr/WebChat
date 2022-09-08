@@ -1,6 +1,5 @@
 import Block from '../../../utils/templateEngine/block';
-import { TTemplatorContext } from '../../../utils/types/types';
-import { regPage } from './registrationPageModule.tmpl';
+import { regPageTemplate } from './registrationPageModule.tmpl';
 import { templatorConnector } from '../../../utils/templateEngine/templatorConnector';
 import { FullForm } from '../../Blocks/FullForm/FullForm';
 import { nameValidation } from '../../../utils/functions/nameValidation';
@@ -10,7 +9,7 @@ import { phoneValidation } from '../../../utils/functions/phoneValidation';
 import { emailValidation } from '../../../utils/functions/emailValidation';
 
 export class RegistrationPage extends Block {
-    constructor(props: TTemplatorContext) {
+    constructor(props: any) {
         super('div', props);
     }
 
@@ -32,26 +31,26 @@ export class RegistrationPage extends Block {
                             message: string;
                         } | null = null;
                         let flag: boolean = true;
-                        for (let i of inputs) {
-                            console.log(i.value);
-                            switch (i.getAttribute('id')) {
+                        for (let input of inputs) {
+                            console.log(input.value);
+                            switch (input.getAttribute('id')) {
                                 case 'last_name':
-                                    valResult = nameValidation(i.value);
+                                    valResult = nameValidation(input.value);
                                     break;
                                 case 'first_name':
-                                    valResult = nameValidation(i.value);
+                                    valResult = nameValidation(input.value);
                                     break;
                                 case 'password':
-                                    valResult = passwordValidation(i.value);
+                                    valResult = passwordValidation(input.value);
                                     break;
                                 case 'login':
-                                    valResult = loginValidation(i.value);
+                                    valResult = loginValidation(input.value);
                                     break;
                                 case 'phone':
-                                    valResult = phoneValidation(i.value);
+                                    valResult = phoneValidation(input.value);
                                     break;
                                 case 'email':
-                                    valResult = emailValidation(i.value);
+                                    valResult = emailValidation(input.value);
                                     break;
                             }
                             if (valResult !== null) {
@@ -59,9 +58,9 @@ export class RegistrationPage extends Block {
                             }
                             if (valResult) {
                                 if (!valResult.success) {
-                                    i.style.border = '2px solid red';
+                                    input.style.border = '2px solid red';
                                     let p =
-                                        i.previousElementSibling as HTMLElement;
+                                        input.previousElementSibling as HTMLElement;
 
                                     if (typeof p !== 'undefined') {
                                         p.innerHTML = valResult.message;
@@ -84,7 +83,6 @@ export class RegistrationPage extends Block {
     }
 
     render() {
-        let tmpl = regPage();
-        return this.compile(templatorConnector, this.props, tmpl);
+        return this.compile(templatorConnector, this.props, regPageTemplate());
     }
 }

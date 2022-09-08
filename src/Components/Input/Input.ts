@@ -1,6 +1,6 @@
 import Block from '../../../utils/templateEngine/block';
 import { templatorConnector } from '../../../utils/templateEngine/templatorConnector';
-import { inputComponent } from './input.tmpl';
+import { inputComponentTemplate } from './input.tmpl';
 
 type TInput = {
     properties: { id: any; type: any; class: string };
@@ -22,7 +22,6 @@ export class Input extends Block {
     init() {}
 
     render() {
-        let tmpl = inputComponent();
-        return this.compile(templatorConnector, this.props, tmpl);
+        return this.compile(templatorConnector, this.props, inputComponentTemplate());
     }
 }
