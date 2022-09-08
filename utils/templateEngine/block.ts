@@ -192,9 +192,9 @@ class Block {
         return this.element;
     }
 
-    _makePropsProxy(props: any) {
+    _makePropsProxy = (props: any) => {
         // Ещё один способ передачи this, но он больше не применяется с приходом ES6+
-        const self = this;
+
 
         return new Proxy(props, {
             get(target, prop) {
@@ -203,12 +203,8 @@ class Block {
             },
             set(target, prop, value) {
                 const oldTarget = { ...target };
-
                 target[prop] = value;
-
-                // Запускаем обновление компоненты
-                // Плохой cloneDeep, в следующей итерации нужно заставлять добавлять cloneDeep им самим
-                self.eventBus().emit(Block.EVENTS.FLOW_CDU, oldTarget, target);
+                this.eventBus().emit(Block.EVENTS.FLOW_CDU, oldTarget, target);
                 return true;
             },
             deleteProperty() {

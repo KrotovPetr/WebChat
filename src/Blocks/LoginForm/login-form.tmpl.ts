@@ -6,8 +6,8 @@
 
 export function loginFormBlockTemplate() {
     return `
-        {{inputContainer1}}
-        {{inputContainer2}}
+        {{inputContainerLogin}}
+        {{inputContainerPassword}}
         {{button}}
     `;
 }

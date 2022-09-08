@@ -40,18 +40,7 @@ export class LoginPage extends Block {
                             if (valResult !== null) {
                                 flag = valResult.success;
                             }
-                            if (valResult) {
-                                if (!valResult.success) {
-                                    input.style.border = '2px solid red';
-                                    let p =
-                                        input.previousElementSibling as HTMLElement;
 
-                                    if (typeof p !== 'undefined') {
-                                        p.innerHTML = valResult.message;
-                                        p.style.color = 'red';
-                                    }
-                                }
-                            }
                         }
                         if (flag) {
                             window.location.href =

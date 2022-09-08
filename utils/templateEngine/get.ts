@@ -1,11 +1,10 @@
-import { TTemplatorContext } from '../types/types';
 
 export function get(
-    obj: TTemplatorContext,
+    obj: any,
     path: string,
-): undefined | string | TTemplatorContext {
+): undefined | string |any {
     const keys: string[] = path.split('.');
-    let result: TTemplatorContext | string = obj;
+    let result: any | string = obj;
     for (let key of keys) {
         let bufKey: RegExpMatchArray | null = key.match(/(\w+)/);
         let value: string | undefined = '';

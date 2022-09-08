@@ -53,22 +53,23 @@ export class RegistrationPage extends Block {
                                     valResult = emailValidation(input.value);
                                     break;
                             }
-                            if (valResult !== null) {
-                                flag = valResult.success;
-                            }
+
                             if (valResult) {
                                 if (!valResult.success) {
-                                    input.style.border = '2px solid red';
+                                    flag=false;
+                                    input.setAttribute("success", "true")
                                     let p =
                                         input.previousElementSibling as HTMLElement;
 
                                     if (typeof p !== 'undefined') {
                                         p.innerHTML = valResult.message;
-                                        p.style.color = 'red';
+                                        p.setAttribute("error", "true");
                                     }
                                 }
                             }
+
                         }
+
                         if (flag) {
                             window.location.href =
                                 '../../chatPage/chatPage.html';

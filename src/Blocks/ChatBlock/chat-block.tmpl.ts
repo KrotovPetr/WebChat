@@ -36,7 +36,7 @@ export function chatBlockTemplate(): string {
                     </div>
                 </div>
             </div>
-            <div class="chatFooter"><input class="messageInput" type="text" placeholder="Введите сообщение" />
+            <div class="chatFooter">{{input}}
             {{"send_button"}}
             </div>
         `;

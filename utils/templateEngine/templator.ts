@@ -13,6 +13,8 @@ export class Templator {
         return this._compileTemplate(this._template, ctx);
     }
 
+
+
     _compileTemplate(template: string, ctx: any) {
         // console.log(ctx)
         let tmpl: string = template;
@@ -22,6 +24,9 @@ export class Templator {
 
         // Важно делать exec именно через константу, иначе уйдёте в бесконечный цикл
         while ((key = regExp.exec(tmpl))) {
+            // if(key[1].includes("#")){
+            //     repeatString(template, ctx)
+            // }
             if (key[1]) {
                 const data: string | any | undefined = get(
                     ctx,

@@ -2,9 +2,11 @@ import Block from '../../../utils/templateEngine/block';
 import { templatorConnector } from '../../../utils/templateEngine/templatorConnector';
 import { chatBlockTemplate } from './chat-block.tmpl';
 import { SendButton } from '../../Components/SendButton/SendButton';
+import { MessageInput } from '../../Components/MessageInput/MessageInput';
 
 type TChatBlock = {
     properties: { class: string };
+    message: string
 };
 
 /**
@@ -26,13 +28,24 @@ export class ChatBlock extends Block {
             },
             events: {
                 click: () => {
-                    let input = document.getElementsByClassName(
-                        'messageInput',
-                    )[0] as HTMLInputElement;
-                    if (input.value.length === 0) {
-                        console.log(input.value);
+                    if (this.props.message) {
+                        console.log(this.props.message);
                     }
                 },
+            },
+        });
+        this.children.input = new MessageInput({
+            properties: {
+                class: 'messageInput',
+                type: 'text',
+            },
+
+            events: {
+                blur: (e: Event) => {
+                    let input:HTMLInputElement = e.target as HTMLInputElement;
+                    this.props.message = input.value;
+                },
+
             },
         });
     }

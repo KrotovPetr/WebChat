@@ -27,27 +27,27 @@ const METHODS:TMethods = {
 class HTTPTransport {
     get = (url: string, options: {} | TOptions = {}) => {
         let dataOp = queryStringify(options.data);
-        return this.request(url+dataOp, {...options,  method: METHODS.GET}, options.timeout);
+        return this.request(url+dataOp, {...options,  method: METHODS.GET});
     };
 
     put=(url: string, options={})=>{
         let dataOp = queryStringify(options.data);
-        return this.request(url, {...options ,  data: dataOp, method: METHODS.GET}, options.timeout);
+        return this.request(url, {...options ,  data: dataOp, method: METHODS.GET});
     }
     post=(url: string,options={})=>{
         let dataOp = queryStringify(options.data);
-        return this.request(url, {...options,  data: dataOp, method: METHODS.GET}, options.timeout);
+        return this.request(url, {...options,  data: dataOp, method: METHODS.GET});
 
     }
     delete=(url: string,options={})=>{
         let dataOp = queryStringify(options.data);
-        return this.request(url, {...options,  data: dataOp, method: METHODS.GET}, options.timeout);
+        return this.request(url, {...options,  data: dataOp, method: METHODS.GET});
     }
 
-    request = (url: string, options: TOptions, timeout: number = 5000) => {
+    request = (url: string, options: TOptions) => {
         return new Promise((resolve, reject) => {
             const xhr = new XMLHttpRequest();
-            xhr.open(options.method, url);
+            xhr.open(<string>options.method, url);
             if(options.headers){
                 for(let key in options.headers){
                     xhr.setRequestHeader(key, options.headers[key]);

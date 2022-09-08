@@ -3,6 +3,13 @@ import { templatorConnector } from '../../../utils/templateEngine/templatorConne
 import { Button } from '../../Components/Button/Button';
 import { regFormBlockTemplate } from './full-form.tmpl';
 import { ValidateInput } from '../ValidateInput/ValidateInput';
+import { loginValidation } from '../../../utils/functions/loginValidation';
+import { nameValidation } from '../../../utils/functions/nameValidation';
+import { emailValidation } from '../../../utils/functions/emailValidation';
+import { phoneValidation } from '../../../utils/functions/phoneValidation';
+import { validationTemplate } from '../../../utils/functions/validationTemplate';
+import { passwordValidation } from '../../../utils/functions/passwordValidation';
+import { validationInputFocus } from '../../../utils/functions/validationInputFocus';
 
 type TFullForm = {
     label: string;
@@ -31,6 +38,15 @@ export class FullForm extends Block {
             properties: {
                 class: 'inputContainer',
             },
+            events:{
+                blur:(e:Event)=>{
+                    validationTemplate(e.target as HTMLInputElement, nameValidation);
+
+                },
+                focus:(e:Event)=>{
+                    validationInputFocus(e.target as HTMLInputElement, "Имя");
+                }
+            }
         });
         this.children.inputContainerLastName = new ValidateInput({
             inputProp: {
@@ -42,6 +58,15 @@ export class FullForm extends Block {
             properties: {
                 class: 'inputContainer',
             },
+            events:{
+                blur:(e:Event)=>{
+                    validationTemplate(e.target as HTMLInputElement, nameValidation);
+
+                },
+                focus:(e:Event)=>{
+                    validationInputFocus(e.target as HTMLInputElement, "Фамилия");
+                }
+            }
         });
         this.children.inputContainerLogin = new ValidateInput({
             inputProp: {
@@ -53,6 +78,15 @@ export class FullForm extends Block {
             properties: {
                 class: 'inputContainer',
             },
+            events:{
+                blur:(e:Event)=>{
+                    validationTemplate(e.target as HTMLInputElement, loginValidation);
+
+                },
+                focus:(e:Event)=>{
+                    validationInputFocus(e.target as HTMLInputElement, "Логин");
+                }
+            }
         });
         this.children.inputContainerEmail = new ValidateInput({
             inputProp: {
@@ -64,10 +98,19 @@ export class FullForm extends Block {
             properties: {
                 class: 'inputContainer',
             },
+            events:{
+                blur:(e:Event)=>{
+                    validationTemplate(e.target as HTMLInputElement, emailValidation);
+
+                },
+                focus:(e:Event)=>{
+                    validationInputFocus(e.target as HTMLInputElement, "Эл. почта");
+                }
+            }
         });
         this.children.inputContainerPassword = new ValidateInput({
             inputProp: {
-                type: 'text',
+                type: 'password',
                 name: 'password',
                 data: 'Пароль',
                 inputDescription: 'inputDescription',
@@ -75,6 +118,15 @@ export class FullForm extends Block {
             properties: {
                 class: 'inputContainer',
             },
+            events:{
+                blur:(e:Event)=>{
+                    validationTemplate(e.target as HTMLInputElement, passwordValidation);
+
+                },
+                focus:(e:Event, )=>{
+                    validationInputFocus(e.target as HTMLInputElement, "Пароль");
+                }
+            }
         });
         this.children.inputContainerPhone = new ValidateInput({
             inputProp: {
@@ -86,6 +138,15 @@ export class FullForm extends Block {
             properties: {
                 class: 'inputContainer',
             },
+            events:{
+                blur:(e:Event)=>{
+                    validationTemplate(e.target as HTMLInputElement, phoneValidation);
+
+                },
+                focus:(e:Event)=>{
+                    validationInputFocus(e.target as HTMLInputElement, "Телефон");
+                }
+            }
         });
 
         this.children.button = new Button({

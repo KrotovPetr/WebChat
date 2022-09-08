@@ -3,6 +3,10 @@ import { templatorConnector } from '../../../utils/templateEngine/templatorConne
 import { Button } from '../../Components/Button/Button';
 import { ValidateInput } from '../ValidateInput/ValidateInput';
 import { loginFormBlockTemplate } from './login-form.tmpl';
+import { passwordValidation } from '../../../utils/functions/passwordValidation';
+import { loginValidation } from '../../../utils/functions/loginValidation';
+import { validationInputFocus } from '../../../utils/functions/validationInputFocus';
+import { validationTemplate } from '../../../utils/functions/validationTemplate';
 
 type TLoginForm = {
     events: { submit: (e: Event) => void };
@@ -20,7 +24,7 @@ export class LoginForm extends Block {
     }
 
     init() {
-        this.children.inputContainer1 = new ValidateInput({
+        this.children.inputContainerLogin = new ValidateInput({
             inputProp: {
                 type: 'text',
                 name: 'login',
@@ -30,9 +34,18 @@ export class LoginForm extends Block {
             properties: {
                 class: 'inputContainer',
             },
+            events:{
+                blur:(e:Event)=>{
+                    validationTemplate(e.target as HTMLInputElement, loginValidation);
+
+                },
+                focus:(e:Event)=>{
+                    validationInputFocus(e.target as HTMLInputElement, "Логин");
+                }
+            }
         });
 
-        this.children.inputContainer2 = new ValidateInput({
+        this.children.inputContainerPassword = new ValidateInput({
             inputProp: {
                 type: 'password',
                 name: 'password',
@@ -42,6 +55,15 @@ export class LoginForm extends Block {
             properties: {
                 class: 'inputContainer',
             },
+            events:{
+                blur:(e:Event)=>{
+                    validationTemplate(e.target as HTMLInputElement, passwordValidation);
+
+                },
+                focus:(e:Event)=>{
+                    validationInputFocus(e.target as HTMLInputElement, "Пароль");
+                }
+            }
         });
 
         this.children.button = new Button({
