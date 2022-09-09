@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "<h1>Проект \"WebChat\"</h1> <p>Это учебный проект, где отрабатываются навыки и новые знания</p> <hr/> <h3>Для реализации использованы:</h3> <ul>     <li>Parcel</li>     <li>Express && Node.js</li>     <li>SCSS</li>     <li>JavaScript</li>     <li>TypeScript</li>",
   "scripts": {
-    "gg": "npm build",
     "build": "parcel build src/TempPages/index.html",
     "pug": "parcel src/TempPages/index.html --no-cache --port 3000",
     "start": "npm run build && nodemon index.js --port 3000",
@@ -36,9 +35,9 @@
   },
   "dependencies": {
     "express": "4.18.1",
-    "nodemon": "2.0.19"
+    "nodemon": "2.0.19",
+    "nanoid": "4.0.0"
   },
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KrotovPetr/WebChat.git"
