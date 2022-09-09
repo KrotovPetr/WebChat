@@ -10,6 +10,10 @@ export class ServerErrorPage extends Block {
     init() {}
 
     render() {
-        return this.compile(templatorConnector, this.props, errorPageTemplate());
+        return this.compile(
+            templatorConnector,
+            this.props,
+            errorPageTemplate(),
+        );
     }
 }

@@ -13,7 +13,7 @@ export class ChatPage extends Block {
             properties: {
                 class: 'chatExContainer',
             },
-            message:"",
+            message: '',
         });
     }
 

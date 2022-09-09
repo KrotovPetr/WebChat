@@ -1,7 +1,5 @@
-
 import { EventBus } from './event-bus';
 import { nanoid } from 'nanoid';
-
 
 class Block {
     static EVENTS = {
@@ -195,7 +193,6 @@ class Block {
     _makePropsProxy = (props: any) => {
         // Ещё один способ передачи this, но он больше не применяется с приходом ES6+
 
-
         return new Proxy(props, {
             get(target, prop) {
                 const value = target[prop];
@@ -211,7 +208,7 @@ class Block {
                 throw new Error('Нет доступа');
             },
         });
-    }
+    };
 
     _createDocumentElement(tagName: string) {
         // Можно сделать метод, который через фрагменты в цикле создаёт сразу несколько блоков

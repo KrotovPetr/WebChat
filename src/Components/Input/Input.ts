@@ -22,6 +22,10 @@ export class Input extends Block {
     init() {}
 
     render() {
-        return this.compile(templatorConnector, this.props, inputComponentTemplate());
+        return this.compile(
+            templatorConnector,
+            this.props,
+            inputComponentTemplate(),
+        );
     }
 }

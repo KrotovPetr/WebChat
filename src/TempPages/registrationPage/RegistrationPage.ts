@@ -56,18 +56,17 @@ export class RegistrationPage extends Block {
 
                             if (valResult) {
                                 if (!valResult.success) {
-                                    flag=false;
-                                    input.setAttribute("success", "true")
+                                    flag = false;
+                                    input.setAttribute('success', 'true');
                                     let p =
                                         input.previousElementSibling as HTMLElement;
 
                                     if (typeof p !== 'undefined') {
                                         p.innerHTML = valResult.message;
-                                        p.setAttribute("error", "true");
+                                        p.setAttribute('error', 'true');
                                     }
                                 }
                             }
-
                         }
 
                         if (flag) {

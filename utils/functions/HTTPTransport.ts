@@ -1,60 +1,69 @@
 import { queryStringify } from './queryStringify';
 
 type TMethods = {
-    GET: string,
-    PUT: string,
-    DELETE: string,
-    POST: string,
-}
+    GET: string;
+    PUT: string;
+    DELETE: string;
+    POST: string;
+};
 
 type TOptions = {
-    headers?: any,
-    data?: any,
-    timeout?: number | string,
+    headers?: any;
+    data?: any;
+    timeout?: number | string;
     method?: string;
-}
+};
 
-const METHODS:TMethods = {
+const METHODS: TMethods = {
     GET: 'GET',
     PUT: 'PUT',
     DELETE: 'DELETE',
     POST: 'POST',
 };
 
-
-
 // @ts-ignore
 class HTTPTransport {
     get = (url: string, options: {} | TOptions = {}) => {
         let dataOp = queryStringify(options.data);
-        return this.request(url+dataOp, {...options,  method: METHODS.GET});
+        return this.request(url + dataOp, { ...options, method: METHODS.GET });
     };
 
-    put=(url: string, options={})=>{
+    put = (url: string, options = {}) => {
         let dataOp = queryStringify(options.data);
-        return this.request(url, {...options ,  data: dataOp, method: METHODS.GET});
-    }
-    post=(url: string,options={})=>{
+        return this.request(url, {
+            ...options,
+            data: dataOp,
+            method: METHODS.GET,
+        });
+    };
+    post = (url: string, options = {}) => {
         let dataOp = queryStringify(options.data);
-        return this.request(url, {...options,  data: dataOp, method: METHODS.GET});
-
-    }
-    delete=(url: string,options={})=>{
+        return this.request(url, {
+            ...options,
+            data: dataOp,
+            method: METHODS.GET,
+        });
+    };
+    delete = (url: string, options = {}) => {
         let dataOp = queryStringify(options.data);
-        return this.request(url, {...options,  data: dataOp, method: METHODS.GET});
-    }
+        return this.request(url, {
+            ...options,
+            data: dataOp,
+            method: METHODS.GET,
+        });
+    };
 
     request = (url: string, options: TOptions) => {
         return new Promise((resolve, reject) => {
             const xhr = new XMLHttpRequest();
             xhr.open(<string>options.method, url);
-            if(options.headers){
-                for(let key in options.headers){
+            if (options.headers) {
+                for (let key in options.headers) {
                     xhr.setRequestHeader(key, options.headers[key]);
                 }
             }
 
-            xhr.onload = function() {
+            xhr.onload = function () {
                 resolve(xhr);
             };
 
@@ -67,8 +76,6 @@ class HTTPTransport {
             } else {
                 xhr.send(options.data);
             }
-
         });
-
     };
 }

@@ -40,7 +40,6 @@ export class LoginPage extends Block {
                             if (valResult !== null) {
                                 flag = valResult.success;
                             }
-
                         }
                         if (flag) {
                             window.location.href =
@@ -56,6 +55,10 @@ export class LoginPage extends Block {
     }
 
     render() {
-        return this.compile(templatorConnector, this.props, loginPageTemplate());
+        return this.compile(
+            templatorConnector,
+            this.props,
+            loginPageTemplate(),
+        );
     }
 }

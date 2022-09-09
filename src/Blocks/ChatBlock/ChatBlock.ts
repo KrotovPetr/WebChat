@@ -6,7 +6,7 @@ import { MessageInput } from '../../Components/MessageInput/MessageInput';
 
 type TChatBlock = {
     properties: { class: string };
-    message: string
+    message: string;
 };
 
 /**
@@ -42,15 +42,18 @@ export class ChatBlock extends Block {
 
             events: {
                 blur: (e: Event) => {
-                    let input:HTMLInputElement = e.target as HTMLInputElement;
+                    let input: HTMLInputElement = e.target as HTMLInputElement;
                     this.props.message = input.value;
                 },
-
             },
         });
     }
 
     render() {
-        return this.compile(templatorConnector, this.props, chatBlockTemplate());
+        return this.compile(
+            templatorConnector,
+            this.props,
+            chatBlockTemplate(),
+        );
     }
 }

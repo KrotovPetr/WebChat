@@ -15,7 +15,9 @@ export function passwordValidation(str: string): {
         };
     }
 
-    let valid: RegExpMatchArray | null = str.match(/^(?=.*[A-Z])[A-Za-z0-9_]+$/);
+    let valid: RegExpMatchArray | null = str.match(
+        /^(?=.*[A-Z])[A-Za-z0-9_]+$/,
+    );
     if (!!valid) {
         return {
             success: true,

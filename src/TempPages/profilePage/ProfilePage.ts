@@ -10,6 +10,10 @@ export class ProfilePage extends Block {
     init() {}
 
     render() {
-        return this.compile(templatorConnector, this.props, profilePageTemplate());
+        return this.compile(
+            templatorConnector,
+            this.props,
+            profilePageTemplate(),
+        );
     }
 }

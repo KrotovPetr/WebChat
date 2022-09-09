@@ -19,6 +19,10 @@ export class Button extends Block {
     init() {}
 
     render() {
-        return this.compile(templatorConnector, this.props,buttonComponentTemplate());
+        return this.compile(
+            templatorConnector,
+            this.props,
+            buttonComponentTemplate(),
+        );
     }
 }

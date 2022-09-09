@@ -38,15 +38,17 @@ export class FullForm extends Block {
             properties: {
                 class: 'inputContainer',
             },
-            events:{
-                blur:(e:Event)=>{
-                    validationTemplate(e.target as HTMLInputElement, nameValidation);
-
+            events: {
+                blur: (e: Event) => {
+                    validationTemplate(
+                        e.target as HTMLInputElement,
+                        nameValidation,
+                    );
                 },
-                focus:(e:Event)=>{
-                    validationInputFocus(e.target as HTMLInputElement, "Имя");
-                }
-            }
+                focus: (e: Event) => {
+                    validationInputFocus(e.target as HTMLInputElement, 'Имя');
+                },
+            },
         });
         this.children.inputContainerLastName = new ValidateInput({
             inputProp: {
@@ -58,15 +60,20 @@ export class FullForm extends Block {
             properties: {
                 class: 'inputContainer',
             },
-            events:{
-                blur:(e:Event)=>{
-                    validationTemplate(e.target as HTMLInputElement, nameValidation);
-
+            events: {
+                blur: (e: Event) => {
+                    validationTemplate(
+                        e.target as HTMLInputElement,
+                        nameValidation,
+                    );
                 },
-                focus:(e:Event)=>{
-                    validationInputFocus(e.target as HTMLInputElement, "Фамилия");
-                }
-            }
+                focus: (e: Event) => {
+                    validationInputFocus(
+                        e.target as HTMLInputElement,
+                        'Фамилия',
+                    );
+                },
+            },
         });
         this.children.inputContainerLogin = new ValidateInput({
             inputProp: {
@@ -78,15 +85,17 @@ export class FullForm extends Block {
             properties: {
                 class: 'inputContainer',
             },
-            events:{
-                blur:(e:Event)=>{
-                    validationTemplate(e.target as HTMLInputElement, loginValidation);
-
+            events: {
+                blur: (e: Event) => {
+                    validationTemplate(
+                        e.target as HTMLInputElement,
+                        loginValidation,
+                    );
                 },
-                focus:(e:Event)=>{
-                    validationInputFocus(e.target as HTMLInputElement, "Логин");
-                }
-            }
+                focus: (e: Event) => {
+                    validationInputFocus(e.target as HTMLInputElement, 'Логин');
+                },
+            },
         });
         this.children.inputContainerEmail = new ValidateInput({
             inputProp: {
@@ -98,15 +107,20 @@ export class FullForm extends Block {
             properties: {
                 class: 'inputContainer',
             },
-            events:{
-                blur:(e:Event)=>{
-                    validationTemplate(e.target as HTMLInputElement, emailValidation);
-
+            events: {
+                blur: (e: Event) => {
+                    validationTemplate(
+                        e.target as HTMLInputElement,
+                        emailValidation,
+                    );
                 },
-                focus:(e:Event)=>{
-                    validationInputFocus(e.target as HTMLInputElement, "Эл. почта");
-                }
-            }
+                focus: (e: Event) => {
+                    validationInputFocus(
+                        e.target as HTMLInputElement,
+                        'Эл. почта',
+                    );
+                },
+            },
         });
         this.children.inputContainerPassword = new ValidateInput({
             inputProp: {
@@ -118,15 +132,20 @@ export class FullForm extends Block {
             properties: {
                 class: 'inputContainer',
             },
-            events:{
-                blur:(e:Event)=>{
-                    validationTemplate(e.target as HTMLInputElement, passwordValidation);
-
+            events: {
+                blur: (e: Event) => {
+                    validationTemplate(
+                        e.target as HTMLInputElement,
+                        passwordValidation,
+                    );
                 },
-                focus:(e:Event, )=>{
-                    validationInputFocus(e.target as HTMLInputElement, "Пароль");
-                }
-            }
+                focus: (e: Event) => {
+                    validationInputFocus(
+                        e.target as HTMLInputElement,
+                        'Пароль',
+                    );
+                },
+            },
         });
         this.children.inputContainerPhone = new ValidateInput({
             inputProp: {
@@ -138,15 +157,20 @@ export class FullForm extends Block {
             properties: {
                 class: 'inputContainer',
             },
-            events:{
-                blur:(e:Event)=>{
-                    validationTemplate(e.target as HTMLInputElement, phoneValidation);
-
+            events: {
+                blur: (e: Event) => {
+                    validationTemplate(
+                        e.target as HTMLInputElement,
+                        phoneValidation,
+                    );
                 },
-                focus:(e:Event)=>{
-                    validationInputFocus(e.target as HTMLInputElement, "Телефон");
-                }
-            }
+                focus: (e: Event) => {
+                    validationInputFocus(
+                        e.target as HTMLInputElement,
+                        'Телефон',
+                    );
+                },
+            },
         });
 
         this.children.button = new Button({
@@ -159,6 +183,10 @@ export class FullForm extends Block {
     }
 
     render() {
-        return this.compile(templatorConnector, this.props, regFormBlockTemplate());
+        return this.compile(
+            templatorConnector,
+            this.props,
+            regFormBlockTemplate(),
+        );
     }
 }

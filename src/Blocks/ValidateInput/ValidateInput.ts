@@ -3,7 +3,6 @@ import { Input } from '../../Components/Input/Input';
 import { templatorConnector } from '../../../utils/templateEngine/templatorConnector';
 import { validateInputTemplate } from './validate-input.tmpl';
 
-
 /**
  * Класс, собирающий блок с полем ввода
  * Расширяет класс Block
@@ -25,7 +24,7 @@ export class ValidateInput extends Block {
             events: {
                 blur: this.props.events.blur,
                 focus: this.props.events.focus,
-                click:this.props.events.click
+                click: this.props.events.click,
                 // blur: (e: MouseEvent) => {
                 //     e.preventDefault();
                 //
@@ -104,6 +103,10 @@ export class ValidateInput extends Block {
     }
 
     render() {
-        return this.compile(templatorConnector, this.props, validateInputTemplate());
+        return this.compile(
+            templatorConnector,
+            this.props,
+            validateInputTemplate(),
+        );
     }
 }

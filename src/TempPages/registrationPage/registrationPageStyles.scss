@@ -1,45 +1,42 @@
-@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+@import 'https://fonts.googleapis.com/css2?family=Roboto&display=swap';
 @import '../../../utils/styles/_colours';
 
 * {
-  padding: 0;
-  margin: 0;
-  font-family: Roboto, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, sans-serif;
 }
 
-
 .pageContainer {
-  width: 100%;
-  height: 100vh;
-  background: $white;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
-
-
-  .formContainer {
+    width: 100%;
+    height: 100vh;
+    background: $white;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    width: 600px;
-    height: 850px;
-    box-shadow: 20px 20px 60px $shadowColour, -20px -20px 60px $white;
-    border-radius: 30px;
-  }
 
+    .formContainer {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        width: 600px;
+        height: 850px;
+        box-shadow: 20px 20px 60px $shadowColour, -20px -20px 60px $white;
+        border-radius: 30px;
+    }
 
-  .linkText {
-    font-size: 18px;
-    font-weight: 500;
-    color: $black;
-    margin: 15px 0 0;
-    cursor: pointer;
-    text-decoration: none;
-  }
+    .linkText {
+        font-size: 18px;
+        font-weight: 500;
+        color: $black;
+        margin: 15px 0 0;
+        cursor: pointer;
+        text-decoration: none;
+    }
 
-  .linkText:hover {
-    text-decoration: underline;
-  }
+    .linkText:hover {
+        text-decoration: underline;
+    }
 }

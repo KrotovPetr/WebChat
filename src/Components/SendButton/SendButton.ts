@@ -20,6 +20,10 @@ export class SendButton extends Block {
     init() {}
 
     render() {
-        return this.compile(templatorConnector, this.props, sendButtonComponentTemplate());
+        return this.compile(
+            templatorConnector,
+            this.props,
+            sendButtonComponentTemplate(),
+        );
     }
 }

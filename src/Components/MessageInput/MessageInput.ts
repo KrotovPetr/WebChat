@@ -5,7 +5,7 @@ import { messageInputComponentTemplate } from './message-input.tmpl';
 type TInput = {
     properties: { id?: string; type: string; class: string };
     events: {
-        blur:(e: Event)=>void;
+        blur: (e: Event) => void;
     };
 };
 /**
@@ -20,6 +20,10 @@ export class MessageInput extends Block {
     init() {}
 
     render() {
-        return this.compile(templatorConnector, this.props, messageInputComponentTemplate());
+        return this.compile(
+            templatorConnector,
+            this.props,
+            messageInputComponentTemplate(),
+        );
     }
 }

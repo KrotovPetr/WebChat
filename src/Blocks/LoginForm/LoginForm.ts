@@ -34,15 +34,17 @@ export class LoginForm extends Block {
             properties: {
                 class: 'inputContainer',
             },
-            events:{
-                blur:(e:Event)=>{
-                    validationTemplate(e.target as HTMLInputElement, loginValidation);
-
+            events: {
+                blur: (e: Event) => {
+                    validationTemplate(
+                        e.target as HTMLInputElement,
+                        loginValidation,
+                    );
                 },
-                focus:(e:Event)=>{
-                    validationInputFocus(e.target as HTMLInputElement, "Логин");
-                }
-            }
+                focus: (e: Event) => {
+                    validationInputFocus(e.target as HTMLInputElement, 'Логин');
+                },
+            },
         });
 
         this.children.inputContainerPassword = new ValidateInput({
@@ -55,15 +57,20 @@ export class LoginForm extends Block {
             properties: {
                 class: 'inputContainer',
             },
-            events:{
-                blur:(e:Event)=>{
-                    validationTemplate(e.target as HTMLInputElement, passwordValidation);
-
+            events: {
+                blur: (e: Event) => {
+                    validationTemplate(
+                        e.target as HTMLInputElement,
+                        passwordValidation,
+                    );
                 },
-                focus:(e:Event)=>{
-                    validationInputFocus(e.target as HTMLInputElement, "Пароль");
-                }
-            }
+                focus: (e: Event) => {
+                    validationInputFocus(
+                        e.target as HTMLInputElement,
+                        'Пароль',
+                    );
+                },
+            },
         });
 
         this.children.button = new Button({
@@ -81,6 +88,10 @@ export class LoginForm extends Block {
     }
 
     render() {
-        return this.compile(templatorConnector, this.props, loginFormBlockTemplate());
+        return this.compile(
+            templatorConnector,
+            this.props,
+            loginFormBlockTemplate(),
+        );
     }
 }

@@ -1,8 +1,4 @@
-
-export function get(
-    obj: any,
-    path: string,
-): undefined | string |any {
+export function get(obj: any, path: string): undefined | string | any {
     const keys: string[] = path.split('.');
     let result: any | string = obj;
     for (let key of keys) {
