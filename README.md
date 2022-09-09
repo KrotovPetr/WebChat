@@ -14,7 +14,7 @@
 <h3>Ссылки:</h3>
 <ul>
     <li>Figma макет: <a>https://www.figma.com/file/cYcmqlqyIJ3I7VAGe7wcqR/WebChat?node-id=0%3A1</a></li>
-    <li>Задеплоен на сервисе Netlify: <a>yawebchat.netlify.app</a></li>
+    <li>Задеплоен на сервисе Netlify: <a>https://yawebchat.netlify.app</a></li>
 </ul>
 
 <hr/>
