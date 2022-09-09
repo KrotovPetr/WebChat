@@ -6,7 +6,7 @@ export function changeSpecFunctions(str: string, ctx: any): string {
     let ifArr = str.match(/(#if)\s(\w)+/gi);
     if (ifArr !== null) {
         for (let oper of ifArr) {
-            str = ifOperFunctions(oper.split("#")[1], str, ctx);
+            str = ifOperFunctions(oper.split('#')[1], str, ctx);
         }
     }
     let eachArr = str.match(/({{(.)each\s(\w)+}})/gi);

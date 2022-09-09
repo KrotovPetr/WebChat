@@ -1,4 +1,4 @@
-export function errorPageTemplate() {
+export function errorPageTemplate():string {
     return ` <div class = "pageContainer">
         <main class = "contentContainer">
         <h1 class = "header">500</h1>

@@ -4,7 +4,7 @@ import { chatPageTemplate } from './chatPageModule.tmpl';
 import { ChatBlock } from '../../Blocks/ChatBlock/ChatBlock';
 
 export class ChatPage extends Block {
-    constructor(props: any) {
+    constructor(props: {}) {
         super('div', props);
     }
 

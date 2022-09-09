@@ -3,7 +3,7 @@ import { templatorConnector } from '../../../utils/templateEngine/templatorConne
 import Block from '../../../utils/templateEngine/block';
 
 export class ServerErrorPage extends Block {
-    constructor(props: any) {
+    constructor(props: {}) {
         super('div', props);
     }
 

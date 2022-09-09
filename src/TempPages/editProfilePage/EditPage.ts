@@ -4,7 +4,7 @@ import { templatorConnector } from '../../../utils/templateEngine/templatorConne
 import { FullForm } from '../../Blocks/FullForm/FullForm';
 
 export class EditPage extends Block {
-    constructor(props: any) {
+    constructor(props: {}) {
         super('div', props);
     }
 
@@ -15,7 +15,7 @@ export class EditPage extends Block {
                 submit: (e: Event) => {
                     e.preventDefault();
                     let form = document.getElementsByClassName('regForm')[0];
-                    let inputs = form.getElementsByTagName('input');
+                    let inputs: HTMLCollectionOf<HTMLInputElement> = form.getElementsByTagName('input') as HTMLCollectionOf<HTMLInputElement>;
                     for (let input of inputs) {
                         console.log(input.value);
                     }

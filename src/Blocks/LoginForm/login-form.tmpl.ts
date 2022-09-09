@@ -4,7 +4,7 @@
  *
  */
 
-export function loginFormBlockTemplate() {
+export function loginFormBlockTemplate():string {
     return `
         {{inputContainerLogin}}
         {{inputContainerPassword}}

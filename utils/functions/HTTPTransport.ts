@@ -23,12 +23,12 @@ const METHODS: TMethods = {
 
 // @ts-ignore
 class HTTPTransport {
-    get = (url: string, options: {} | TOptions = {}) => {
+    get = (url: string, options: Record<string, any> | TOptions = {}) => {
         let dataOp = queryStringify(options.data);
         return this.request(url + dataOp, { ...options, method: METHODS.GET });
     };
 
-    put = (url: string, options = {}) => {
+    put = (url: string, options: Record<string, any> = {}) => {
         let dataOp = queryStringify(options.data);
         return this.request(url, {
             ...options,
@@ -36,7 +36,7 @@ class HTTPTransport {
             method: METHODS.GET,
         });
     };
-    post = (url: string, options = {}) => {
+    post = (url: string, options: Record<string, any> = {}) => {
         let dataOp = queryStringify(options.data);
         return this.request(url, {
             ...options,
@@ -44,7 +44,7 @@ class HTTPTransport {
             method: METHODS.GET,
         });
     };
-    delete = (url: string, options = {}) => {
+    delete = (url: string, options: Record<string, any> = {}) => {
         let dataOp = queryStringify(options.data);
         return this.request(url, {
             ...options,

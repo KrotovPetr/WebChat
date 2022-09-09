@@ -3,7 +3,7 @@ import { templatorConnector } from '../../../utils/templateEngine/templatorConne
 import { errorPageTemplate } from './errorPageModule.tmpl';
 
 export class NotFoundPage extends Block {
-    constructor(props: any) {
+    constructor(props: {}) {
         super('div', props);
     }
 

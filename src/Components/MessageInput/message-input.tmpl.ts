@@ -3,7 +3,7 @@
  * @return string
  *
  */
-export function messageInputComponentTemplate() {
+export function messageInputComponentTemplate():string {
     return `
     `;
 }

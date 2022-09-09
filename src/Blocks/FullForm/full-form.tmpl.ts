@@ -3,7 +3,7 @@
  * @return string
  */
 
-export function regFormBlockTemplate() {
+export function regFormBlockTemplate():string {
     return `
         {{inputContainerFirstName}}
         {{inputContainerLastName}}

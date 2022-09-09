@@ -1,4 +1,4 @@
-//одуль ошибок 4**
+//модуль ошибок 4**
 
 export function errorPageTemplate(): string {
     return ` <div class = "pageContainer">
