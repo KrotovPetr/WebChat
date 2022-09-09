@@ -39,7 +39,6 @@
     "nodemon": "2.0.19",
     "nanoid": "4.0.0"
   },
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KrotovPetr/WebChat.git"
