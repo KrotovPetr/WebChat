@@ -9,6 +9,9 @@
     "start": "npm run build && nodemon index.js --port 3000",
     "dev": "parcel utils/templateEngine/index.html"
   },
+  "engines": {
+    "npm": "8.11.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -33,7 +36,8 @@
   },
   "dependencies": {
     "express": "4.18.1",
-    "nodemon": "2.0.19"
+    "nodemon": "2.0.19",
+    "nanoid": "4.0.0"
   },
   "main": "index.js",
   "repository": {
